@@ -1,17 +1,283 @@
 <!DOCTYPE html>
 
 <html class="no-js" lang="en-US" prefix="og: https://ogp.me/ns#">
-<head><meta charset="utf-8"/>
+<head><meta charset="utf-8"/><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+</script>
+<!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager 1 -->
+<meta content="DNt7YinwhiVidGNWtKlwYbAPVyyzxK-dg8uDYXAvUG4" name="google-site-verification"/>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> -->
+<!-- <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /> -->
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="rjcommerce" name="author"/>
+<meta content="312050bc7158ba0afe42ee2ed3c21fc6" name="p:domain_verify"/>
+<meta content="#000" name="theme-color"/>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
+<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="text/rocketlazyloadscript" data-rocket-src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- <link rel="preload" href="/wp-content/uploads/fonts/poppins-medium-webfont.woff2" as="font" type="font/woff2" crossorigin> -->
+<link href="https://gmpg.org/xfn/11" rel="profile"/>
+
+
+
+<!-- Web App Manifest (Optional but recommended) -->
+<link href="#/wp-content/themes/rjcommerce/site.webmanifest" rel="manifest"/>
+<!-- Theme Color -->
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<!-- <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://i.ytimg.com"> -->
+<!-- custom scroll pointer -->
+<!-- custom scroll end pointer -->
+
+<script type="text/rocketlazyloadscript">(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
+<title>Node.js Development Services | Rjcommerce</title>
+<link data-rocket-prefetch="" href="https://scripts.clarity.ms" rel="dns-prefetch"/>
+<link data-rocket-prefetch="" href="https://www.clarity.ms" rel="dns-prefetch"/>
+<link data-rocket-prefetch="" href="https://www.googletagmanager.com" rel="dns-prefetch"/>
+<link data-rocket-prefetch="" href="https://www.google-analytics.com" rel="dns-prefetch"/>
+<link data-rocket-prefetch="" href="https://fonts.gstatic.com" rel="dns-prefetch"/>
+<link data-rocket-prefetch="" href="https://googleads.g.doubleclick.net" rel="dns-prefetch"/>
+<link data-rocket-prefetch="" href="https://static-tracking.klaviyo.com" rel="dns-prefetch"/>
+<link data-rocket-prefetch="" href="https://static.klaviyo.com" rel="dns-prefetch"/>
+<link data-rocket-prefetch="" href="https://assets.sitescdn.net" rel="dns-prefetch"/>
+<link data-rocket-prefetch="" href="" rel="dns-prefetch"/>
+<meta content="Rjcommerce delivers custom Node.js backend development, microservices architectures, RESTful/GraphQL APIs, real-time WebSocket apps, and performance tuning." name="description"/>
+<meta content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" name="robots"/>
+<link href="https://rjcommerce.github.io/services/node-services-clean.html" rel="canonical"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="Predictive Analytics Services and Consulting" property="og:title"/>
+<meta content="Commerce Pundit delivers predictive analytics services including custom model development, consulting, retail forecasting, healthcare risk modelling, and predictive HR analytics. Work with an experienced predictive analytics firm." property="og:description"/>
+<meta content="https://rjcommerce.github.io/services/node-services-clean.html" property="og:url"/>
+<meta content="Commerce Pundit" property="og:site_name"/>
+<meta content="https://www.facebook.com/rjcommerce" property="article:publisher"/>
+<meta content="2026-07-08T06:33:31+00:00" property="og:updated_time"/>
+<meta content="2026-06-26T06:58:59+00:00" property="article:published_time"/>
+<meta content="2026-07-08T06:33:31+00:00" property="article:modified_time"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Predictive Analytics Services and Consulting" name="twitter:title"/>
+<meta content="Commerce Pundit delivers predictive analytics services including custom model development, consulting, retail forecasting, healthcare risk modelling, and predictive HR analytics. Work with an experienced predictive analytics firm." name="twitter:description"/>
+<meta content="@rjcommerce" name="twitter:site"/>
+<meta content="@rjcommerce" name="twitter:creator"/>
+
+<!-- /Rank Math WordPress SEO plugin -->
+<link href="//static.klaviyo.com" rel="dns-prefetch"/>
+<link href="//static.addtoany.com" rel="dns-prefetch"/>
+
+
+
+
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_plugins_codup-wp-freshsales_lib_codupads_styles_style.css" id="WordPress to Freshsales Integration - codupads-styles-css" media="all" rel="stylesheet"/>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_plugins_cookie-law-info_legacy_public_css_cookie-law-info-public.css" id="cookie-law-info-css" media="all" rel="stylesheet"/>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_plugins_cookie-law-info_legacy_public_css_cookie-law-info-gdpr.css" id="cookie-law-info-gdpr-css" media="all" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" id="nbcpf-intlTelInput-style-css" media="all" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/country-select-js/2.1.0/css/countrySelect.min.css" id="nbcpf-countryFlag-style-css" media="all" rel="stylesheet"/>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_plugins_faq-schema-for-pages-and-posts_css_jquery-ui.css" id="wp-faq-schema-jquery-ui-css" media="all" rel="stylesheet"/>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_style.css" id="rjcommerce-style-css" media="all" rel="stylesheet"/>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_css_public-style.css" id="rjcommerce-public-style-css" media="all" rel="stylesheet"/>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_css_megaMenu.css" id="rjcommerce-megaMenu-style-css" media="all" rel="stylesheet"/>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_css_inner-page.css" id="rjcommerce-inner-page-css" media="all" rel="stylesheet"/>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_css_master.css" id="rjcommerce-master-style-css" media="all" rel="stylesheet"/>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_css_responsive.css" id="rjcommerce-responsive-style-css" media="all" rel="stylesheet"/>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_css_career-page.css" id="rjcommerce-career-page-css" media="all" rel="stylesheet"/>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_css_career-responsive.css" id="rjcommerce-career-responsive-css" media="all" rel="stylesheet"/>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_css_leadpage.css" id="rjcommerce-leadpage-css" media="all" rel="stylesheet"/>
+<link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_css_leadpage-responsive.css" id="rjcommerce-leadpage-responsive-css" media="all" rel="stylesheet"/>
+
+<style id="rocket-lazyload-inline-css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(#/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+/*# sourceURL=rocket-lazyload-inline-css */
+</style>
+<script id="jquery-js" src="#/wp-includes/js/jquery/jquery.min.js"></script>
+
+<script data-minify="1" data-rocket-defer="" defer="" id="WordPress_to_Freshsales_Integration-js" src="#/wp-content/cache/min/1/wp-content/plugins/codup-wp-freshsales/lib/codupads/scripts/adscript.js?ver=1784036590"></script>
+<script id="addtoany-core-js-before">
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+a2a_config.callbacks.push({ready:function(){document.querySelectorAll(".a2a_s_undefined").forEach(function(emptyIcon){emptyIcon.parentElement.style.display="none";})}});
+
+//# sourceURL=addtoany-core-js-before
+</script>
+<script data-rocket-src="https://static.addtoany.com/menu/page.js" defer="" id="addtoany-core-js" type="text/rocketlazyloadscript"></script>
+<script defer="" id="addtoany-jquery-js" src="#/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1"></script>
+<script id="cookie-law-info-js-extra">
+var Cli_Data = {"nn_cookie_ids":[],"cookielist":[],"non_necessary_cookies":[],"ccpaEnabled":"","ccpaRegionBased":"","ccpaBarEnabled":"","strictlyEnabled":["necessary","obligatoire"],"ccpaType":"gdpr","js_blocking":"1","custom_integration":"","triggerDomRefresh":"","secure_cookies":""};
+var cli_cookiebar_settings = {"animate_speed_hide":"500","animate_speed_show":"500","background":"#FFF","border":"#b1a6a6c2","border_on":"","button_1_button_colour":"#61a229","button_1_button_hover":"#4e8221","button_1_link_colour":"#fff","button_1_as_button":"1","button_1_new_win":"","button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#444","button_2_as_button":"","button_2_hidebar":"","button_3_button_colour":"#dedfe0","button_3_button_hover":"#b2b2b3","button_3_link_colour":"#333333","button_3_as_button":"1","button_3_new_win":"","button_4_button_colour":"#dedfe0","button_4_button_hover":"#b2b2b3","button_4_link_colour":"#333333","button_4_as_button":"","button_7_button_colour":"#ffffff","button_7_button_hover":"#cccccc","button_7_link_colour":"#000000","button_7_as_button":"1","button_7_new_win":"","font_family":"inherit","header_fix":"","notify_animate_hide":"1","notify_animate_show":"","notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":"","scroll_close_reload":"","accept_close_reload":"","reject_close_reload":"","showagain_tab":"","showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#333333","show_once_yn":"","show_once":"10000","logging_on":"","as_popup":"","popup_overlay":"1","bar_heading_text":"","cookie_bar_as":"banner","popup_showagain_position":"bottom-right","widget_position":"left"};
+var log_object = {"ajax_url":"#/wp-admin/admin-ajax.php"};
+//# sourceURL=cookie-law-info-js-extra
+</script>
+<script data-minify="1" data-rocket-defer="" defer="" id="cookie-law-info-js" src="#/wp-content/cache/min/1/wp-content/plugins/cookie-law-info/legacy/public/js/cookie-law-info-public.js?ver=1784036590"></script>
+<link href="#/wp-json/" rel="https://api.w.org/"/><link href="#/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<link href="#/?p=19533" rel="shortlink"/>
+<!-- Google Tag Manager -->
+<script type="text/rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://frbfedzf.usw.stape.io/s9Tjfrbfedzf.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','U=aWQ9R1RNLVc4UFBYS1A1&amp;type=492857b9');</script>
+<!-- End Google Tag Manager -->
+<link as="font" crossorigin="anonymous" href="https://fonts.gstatic.com/s/redhatdisplay/v20/8vIS7wUr0m80wwYf0QCXZzYzUoTg-A6jTY_vCk5Y.woff2" rel="preload" type="font/woff2"/>
+<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+
+
+<style id="wp-custom-css">
+.tools-lanails-page .platform-tools-col i img {
+    max-width: 60px;
+}
+.checkmark-row {
+    color: #fff;
+}
+
+.checkmark-row a {
+    color: #fff;
+    margin: 0 6px 0 6px;
+    text-decoration: underline;
+}
+
+.form-wrapper .checkmark-row input {
+    -webkit-appearance: auto;
+    margin: 0 10px 0 0px;
+}
+
+.checkmark-row .form-col.full-width {
+    display: flex;
+}
+
+.form-row.checkmark-row span.wpcf7-list-item.first.last {
+    display: flex;
+    margin:0;
+}
+
+.checkmark-row a:hover {
+    text-decoration: none;
+}
+.magento-support-page section.faq-section {margin-bottom:0px;}
+.blog-detail-content table td, .blog-detail-content table th {
+    padding: 0;
+    border: none !important; background:none;
+}
+.blog-detail-content table {border:none !important; background:inherit;}
+@media(max-width:767px) {
+table.responsive-table td {
+	display:inline-block;
+	width:100% !important;
+}
+td.mobile-td-space {padding:0 0 15px 0 !important;}
+td.mob-top-0 {padding-top:0px !important;}
+.full-mob-img {width:100% !important;}
+	.form-wrapper .form-col .select-dd:after{ top: 10px;} 
+}
+
+.section_contact .form-btn-row{     display: flex;  justify-content: start;  align-items: center;}
+.section_contact .form-wrapper .form-btn-row .wpcf7-spinner {  position: relative; top: 0;}
+.form-wrapper .container .wpcf7 .resume-upload .file-upload.btn:after {
+    background: url(assets/images/icons/upload_resume.svg) no-repeat center transparent;
+}
+.section_contact .form-btn-row .default-btn.white {
+    font-family: 'Red Hat Display',sans-serif;
+}
+/* CP LEADING PAGE STYLE 21/02/25*/
+
+#backToTop {
+    position: fixed;
+    bottom: 90px;
+    right: 25px;
+    width: 60px; /* Increased size */
+    height: 60px; /* Increased size */
+    background: linear-gradient(135deg, #ff7f00, #ff3d00); /* Gradient for modern look */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, transform 0.3s, background 0.3s;
+    opacity: 0;
+    transform: translateY(10px);
+    cursor: pointer;
+    z-index: 1000;
+    outline: none;
+}
+
+#backToTop svg {
+    width: 30px; /* Increased arrow size */
+    height: 30px; /* Increased arrow size */
+    transition: transform 0.3s;
+}
+
+#backToTop:hover {
+    background: linear-gradient(135deg, #ff3d00, #ff7f00);
+    transform: scale(1.15); /* Slightly bigger on hover */
+}
+
+#backToTop:hover svg {
+    transform: translateY(-4px); /* Moves arrow up slightly */
+}
+
+#backToTop.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+</style>
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript> <script chat="true" data-minify="1" data-rocket-defer="" defer="" src="#/wp-content/cache/min/1/30025065/17552.js?ver=1784036591"></script>
+<script async="" data-minify="1" src="#/wp-content/cache/min/1/30025065/17552.js?ver=1784036591"></script>
+<script data-rocket-type="text/javascript" type="text/rocketlazyloadscript">
+        var sample_properties = {
+            'Address': '8691 MacGyver Mews', //Replace with address of user
+            'City': 'New Jermaine', //Replace with city of user
+            'Mobile': '13457879', //Replace with mobile number of user
+            'Alternate Contact Number': '98765432' //Replace with a custom field
+        };
+        fwcrm.set(sample_properties);
+    </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
 <!-- Global site tag (gtag.js) - Google Ads: 1018708317 -->
+
 
 <!-- Event snippet for Start Chat conversion page -->
 
+<!-- Snitcher analytics code -->
 
-<script id="mcjs" type="text/rocketlazyloadscript">
-        ! function(c, h, i, m, p) {
-            m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
-        }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/2845ebdf9fa4185d3a7ca0cfb/11b4382d06ed968fb8b4f46c6.js");
-    </script>
+
 <script type="text/rocketlazyloadscript">
         (function() {
             var script = document.createElement('script');
@@ -21,34 +287,48 @@
             document.getElementsByTagName('head')[0].appendChild(script);
         })();
     </script>
+<!-- Clarity tracking code for #/ -->
 
-<script data-rocket-type="text/javascript" type="text/rocketlazyloadscript">
-        (function(c, l, a, r, i, t, y) {
-            c[a] = c[a] || function() {
-                (c[a].q = c[a].q || []).push(arguments)
+
+<!-- Meta Pixel Code -->
+<script type="text/rocketlazyloadscript">
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
-            t = l.createElement(r);
-            t.async = 1;
-            t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0];
-            y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "j0jnm59yc1");
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1226172884747288');
+        fbq('track', 'PageView');
     </script>
-
+<noscript><img height="1" src="https://www.facebook.com/tr?id=1226172884747288&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+<!-- End Meta Pixel Code -->
 <meta content="blogarama-b01555c7-6319-47c3-9b25-830688f48044" name="blogarama-site-verification"/>
-<link as="font" crossorigin="" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/wp-content/uploads/fonts/inter-v20-latin-500.woff2" rel="preload" type="font/woff2"/>
 <link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_content-blocks_business_solution_section_style.css" id="content-blocks-business-solution-section-css-css" media="all" rel="stylesheet"/>
 <link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_content-blocks_case_study_solution_offered_style.css" id="content-blocks-case-study-solution-offered-css-css" media="all" rel="stylesheet"/>
 <link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_content-blocks_tech_stack_accordion_section_style.css" id="content-blocks-tech_stack_accordion_section-css-css" media="all" rel="stylesheet"/>
 <link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_content-blocks_testimonial_section_style.css" id="content-blocks-testimonial-section-css-css" media="all" rel="stylesheet"/>
 <link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_content-blocks_services_row_faq_column_block_style.css" id="cp-services-faq-blocks-layout-services-row-faq-column-block-css" media="all" rel="stylesheet"/>
 <link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_plugins_cf7-multi-step_assets_frontend_css_cf7mls.css" id="cf7mls-css" media="all" rel="stylesheet"/>
-<link href="assets/css/wp-content_plugins_cf7-multi-step_assets_frontend_animate_animate.min.css" id="cf7mls_animate-css" media="all" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" id="cf7mls_animate-css" media="all" rel="stylesheet"/>
 <link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_plugins_contact-form-7_includes_css_styles.css" id="contact-form-7-css" media="all" rel="stylesheet"/>
 <link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_themes_rjcommerce_content-blocks_form_block_style.css" id="content-blocks-home-new-contact-colume-style-css" media="all" rel="stylesheet"/>
 <link data-minify="1" href="assets/css/wp-content_cache_min_1_wp-content_plugins_cookie-law-info_legacy_public_css_cookie-law-info-table.css" id="cookie-law-info-table-css" media="all" rel="stylesheet"/>
 <style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta content="WP Rocket 3.23" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_lazyload_iframes wpr_preconnect_external_domains wpr_automatic_lazy_rendering wpr_image_dimensions wpr_minify_css wpr_cdn wpr_preload_links wpr_host_fonts_locally wpr_desktop" name="generator"/>
-    <style id="custom-layout-qa-fixes">
+<style id="custom-layout-qa-fixes">
         /* Fix top white bar gap by positioning header absolutely over the hero */
         header.page-header-wrapper {
             position: absolute !important;
@@ -175,6 +455,7 @@
             color: #ffffff !important;
             margin: 0 0 10px 0 !important;
             font-weight: 700 !important;
+            box-shadow: none !important;
         }
         .stat-box p {
             font-size: 16px !important;
@@ -189,9 +470,20 @@
                 padding: 25px 20px !important;
             }
         }
+        
+        /* General clean font overrides */
+        body, h1, h2, h3, h4, h5, h6, p, span, li, a, button {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+        }
+        .predictive-analytics-services .site-wrapper {
+            overflow-x: hidden !important;
+        }
+        .why-cp-heading, .why-cp-tagline {
+            text-align: center !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
     </style>
-
-
 </head>
 <body class="wp-singular page-template page-template-templates page-template-vibe-coding page-template-templatesvibe-coding-php page page-id-19533 wp-custom-logo wp-theme-rjcommerce ai-solution-for-ecommerce services-testimonial-homedesign predictive-analytics-services group-blog">
 <!-- Page Loader -->
@@ -202,14 +494,14 @@
 <div class="site-wrapper">
 <!-- <div class="cursorball"></div> -->
 <!-- Page Header Start Here -->
-<header class="page-header-wrapper" style="height: 80px; background: transparent;"></header>
+<header class="page-header-wrapper" data-color-update="dark" style="height: 80px; background: transparent;"></header>
 <!-- Page Header End Here -->
 <main class="page-middle work-detail-main-page cb-station-page vibe-page-main ai-voice-cms ai-voice-pag">
 <!-- Banner -->
 <section class="hero case-study-detail-banner" data-color-class="dark" style="background: #0a0f1d !important; position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center; padding-top: 100px;">
 <div class="hero-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; overflow: hidden;">
-<img alt="Node.js Development  Services and Consulting" class="desktop-img" style="width: 100%; height: 100%; object-fit: cover; object-position: right center;" height="1026" src="assets/images/node-hero-v1.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: right center;" width="1920"/>
-<img alt="Node.js Development  Services and Consulting" class="mobile-img" style="width: 100%; height: 100%; object-fit: cover;" height="600" src="assets/images/node-hero-mobile-v1.webp" style="width: 100%; height: 100%; object-fit: cover;" width="720"/>
+<img alt="Node.js Development  Services and Consulting" class="desktop-img" height="1026" src="assets/images/node-hero-v1.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: right center;" width="1920"/><noscript><img alt="Node.js Development  Services and Consulting" class="desktop-img" height="1026" src="assets/images/icons/predictive-analytics-desktop-banner.png" width="1920"/></noscript>
+<img alt="Node.js Development  Services and Consulting" class="mobile-img" height="600" src="assets/images/node-hero-mobile-v1.webp" style="width: 100%; height: 100%; object-fit: cover;" width="720"/><noscript><img alt="Node.js Development  Services and Consulting" class="mobile-img" height="600" src="assets/images/icons/predictive-analytics-mobile-banner.png" width="720"/></noscript>
 </div>
 <div class="overlay" data-bgcolor="#000000" id="mobile-banner-overlay" style="background: rgba(0,0,0,0.55) !important; position: relative !important; z-index: 10 !important; width: 100% !important; padding: 120px 0 !important; margin-left: 0 !important; left: 0 !important;">
 <div class="container">
@@ -262,75 +554,75 @@
 <div class="brand-wrapper leftscrolling" id="left-scroll">
 <ul class="brand-logos-new">
 <li class="brand-logo-new">
-<img alt="AT&amp;T" height="57" src="assets/images/icons/ATT.svg" width="138"/>
+<img alt="AT&amp;T" height="57" src="assets/images/icons/ATT.svg" width="138"/><noscript><img alt="AT&amp;T" height="57" src="assets/images/icons/ATT.svg" width="138"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="CASIO" height="28" src="assets/images/icons/casio.svg" width="146"/>
+<img alt="CASIO" height="28" src="assets/images/icons/casio.svg" width="146"/><noscript><img alt="CASIO" height="28" src="assets/images/icons/casio.svg" width="146"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="BannerBuzz" height="60" src="assets/images/icons/Vector-33.svg" width="223"/>
+<img alt="BannerBuzz" height="60" src="assets/images/icons/Vector-33.svg" width="223"/><noscript><img alt="BannerBuzz" height="60" src="assets/images/icons/Vector-33.svg" width="223"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Enagic" height="59" src="assets/images/icons/enagic_logo-1-1.svg" width="193"/>
+<img alt="Enagic" height="59" src="assets/images/icons/enagic_logo-1-1.svg" width="193"/><noscript><img alt="Enagic" height="59" src="assets/images/icons/enagic_logo-1-1.svg" width="193"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Covers &amp; all" height="39" src="assets/images/icons/thumbnail_logo_feedback2x.1738589672-1.svg" width="203"/>
+<img alt="Covers &amp; all" height="39" src="assets/images/icons/thumbnail_logo_feedback2x.1738589672-1.svg" width="203"/><noscript><img alt="Covers &amp; all" height="39" src="assets/images/icons/thumbnail_logo_feedback2x.1738589672-1.svg" width="203"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="CB Station" height="59" src="assets/images/icons/cbstation-logo-1-1.svg" width="224"/>
+<img alt="CB Station" height="59" src="assets/images/icons/cbstation-logo-1-1.svg" width="224"/><noscript><img alt="CB Station" height="59" src="assets/images/icons/cbstation-logo-1-1.svg" width="224"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Made To Promo" height="43" src="assets/images/icons/mtp-logo-1-1.svg" width="149"/>
+<img alt="Made To Promo" height="43" src="assets/images/icons/mtp-logo-1-1.svg" width="149"/><noscript><img alt="Made To Promo" height="43" src="assets/images/icons/mtp-logo-1-1.svg" width="149"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Tarps &amp; All" height="33" src="assets/images/icons/traps.svg" width="220"/>
+<img alt="Tarps &amp; All" height="33" src="assets/images/icons/traps.svg" width="220"/><noscript><img alt="Tarps &amp; All" height="33" src="assets/images/icons/traps.svg" width="220"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Thermal" height="66" src="assets/images/icons/thermal-club.svg" width="102"/>
+<img alt="Thermal" height="66" src="assets/images/icons/thermal-club.svg" width="102"/><noscript><img alt="Thermal" height="66" src="assets/images/icons/thermal-club.svg" width="102"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="4Seating" height="56" src="assets/images/icons/logo-new-1.svg" width="202"/>
+<img alt="4Seating" height="56" src="assets/images/icons/logo-new-1.svg" width="202"/><noscript><img alt="4Seating" height="56" src="assets/images/icons/logo-new-1.svg" width="202"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Lily Ann Cabinets" height="39" src="assets/images/icons/LilyAnnCabinets-1-1.svg" width="219"/>
+<img alt="Lily Ann Cabinets" height="39" src="assets/images/icons/LilyAnnCabinets-1-1.svg" width="219"/><noscript><img alt="Lily Ann Cabinets" height="39" src="assets/images/icons/LilyAnnCabinets-1-1.svg" width="219"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Container Exchanger " height="58" src="assets/images/icons/containerexchanger-1-1.svg" width="221"/>
+<img alt="Container Exchanger " height="58" src="assets/images/icons/containerexchanger-1-1.svg" width="221"/><noscript><img alt="Container Exchanger " height="58" src="assets/images/icons/containerexchanger-1-1.svg" width="221"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Simpl" height="59" src="assets/images/icons/Simpllot-1.svg" width="186"/>
+<img alt="Simpl" height="59" src="assets/images/icons/Simpllot-1.svg" width="186"/><noscript><img alt="Simpl" height="59" src="assets/images/icons/Simpllot-1.svg" width="186"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Coleman's" height="73" src="assets/images/icons/colemans_logo-1.svg" width="188"/>
+<img alt="Coleman's" height="73" src="assets/images/icons/colemans_logo-1.svg" width="188"/><noscript><img alt="Coleman's" height="73" src="assets/images/icons/colemans_logo-1.svg" width="188"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Maxtrac Suspension" height="62" src="assets/images/icons/maxtracsuspension-1.svg" width="217"/>
+<img alt="Maxtrac Suspension" height="62" src="assets/images/icons/maxtracsuspension-1.svg" width="217"/><noscript><img alt="Maxtrac Suspension" height="62" src="assets/images/icons/maxtracsuspension-1.svg" width="217"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="La Nail Supplies" height="60" src="assets/images/icons/la-nails-logo-new-300x60-1.png" width="300"/>
+<img alt="La Nail Supplies" height="60" src="assets/images/icons/la-nails-logo-new-300x60-1.png" width="300"/><noscript><img alt="La Nail Supplies" height="60" src="assets/images/icons/la-nails-logo-new-300x60-1.png" width="300"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Bigcity Sportswear" height="105" src="assets/images/icons/images-9-1.svg" width="139"/>
+<img alt="Bigcity Sportswear" height="105" src="assets/images/icons/images-9-1.svg" width="139"/><noscript><img alt="Bigcity Sportswear" height="105" src="assets/images/icons/images-9-1.svg" width="139"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Pirate Mx Powersports " height="68" src="assets/images/icons/piratemx-1.svg" width="213"/>
+<img alt="Pirate Mx Powersports " height="68" src="assets/images/icons/piratemx-1.svg" width="213"/><noscript><img alt="Pirate Mx Powersports " height="68" src="assets/images/icons/piratemx-1.svg" width="213"/></noscript>
 <span class="logo-title"></span>
 </li>
 </ul>
@@ -338,71 +630,71 @@
 <div class="brand-wrapper rightscrolling" id="left-scroll">
 <ul class="brand-logos-new">
 <li class="brand-logo-new">
-<img alt="Rockabilia" height="46" src="assets/images/icons/client-company-logo-6.svg" width="230"/>
+<img alt="Rockabilia" height="46" src="assets/images/icons/client-company-logo-6.svg" width="230"/><noscript><img alt="Rockabilia" height="46" src="assets/images/icons/client-company-logo-6.svg" width="230"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Abletech" height="58" src="assets/images/icons/abletec-logo-1.svg" width="175"/>
+<img alt="Abletech" height="58" src="assets/images/icons/abletec-logo-1.svg" width="175"/><noscript><img alt="Abletech" height="58" src="assets/images/icons/abletec-logo-1.svg" width="175"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Plantatorem" height="32" src="assets/images/icons/plantatorem-logo-2-1.svg" width="193"/>
+<img alt="Plantatorem" height="32" src="assets/images/icons/plantatorem-logo-2-1.svg" width="193"/><noscript><img alt="Plantatorem" height="32" src="assets/images/icons/plantatorem-logo-2-1.svg" width="193"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="ReallyCheapFloor" height="76" src="assets/images/icons/reallycheapfloors-logo-1.svg" width="242"/>
+<img alt="ReallyCheapFloor" height="76" src="assets/images/icons/reallycheapfloors-logo-1.svg" width="242"/><noscript><img alt="ReallyCheapFloor" height="76" src="assets/images/icons/reallycheapfloors-logo-1.svg" width="242"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Sing Shark" height="59" src="assets/images/icons/signshark-2.svg" width="230"/>
+<img alt="Sing Shark" height="59" src="assets/images/icons/signshark-2.svg" width="230"/><noscript><img alt="Sing Shark" height="59" src="assets/images/icons/signshark-2.svg" width="230"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Sugar Auto Parts" height="62" src="assets/images/icons/SugarAutoParts-1.svg" width="178"/>
+<img alt="Sugar Auto Parts" height="62" src="assets/images/icons/SugarAutoParts-1.svg" width="178"/><noscript><img alt="Sugar Auto Parts" height="62" src="assets/images/icons/SugarAutoParts-1.svg" width="178"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Canvas Champ" height="38" src="assets/images/icons/CanvasChamp.svg" width="247"/>
+<img alt="Canvas Champ" height="38" src="assets/images/icons/CanvasChamp.svg" width="247"/><noscript><img alt="Canvas Champ" height="38" src="assets/images/icons/CanvasChamp.svg" width="247"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Pixies Gardens" height="81" src="assets/images/icons/Pixiesgarden-1.svg" width="193"/>
+<img alt="Pixies Gardens" height="81" src="assets/images/icons/Pixiesgarden-1.svg" width="193"/><noscript><img alt="Pixies Gardens" height="81" src="assets/images/icons/Pixiesgarden-1.svg" width="193"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Mobile Light Box" height="77" src="assets/images/icons/mobile-light-box-1-1.svg" width="140"/>
+<img alt="Mobile Light Box" height="77" src="assets/images/icons/mobile-light-box-1-1.svg" width="140"/><noscript><img alt="Mobile Light Box" height="77" src="assets/images/icons/mobile-light-box-1-1.svg" width="140"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Beyond Creations" height="74" src="assets/images/icons/beyomd-creation-1.svg" width="204"/>
+<img alt="Beyond Creations" height="74" src="assets/images/icons/beyomd-creation-1.svg" width="204"/><noscript><img alt="Beyond Creations" height="74" src="assets/images/icons/beyomd-creation-1.svg" width="204"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="SDI" height="57" src="assets/images/icons/sdi-1.svg" width="182"/>
+<img alt="SDI" height="57" src="assets/images/icons/sdi-1.svg" width="182"/><noscript><img alt="SDI" height="57" src="assets/images/icons/sdi-1.svg" width="182"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="OREI" height="47" src="assets/images/icons/orei-logo-1-1.svg" width="147"/>
+<img alt="OREI" height="47" src="assets/images/icons/orei-logo-1-1.svg" width="147"/><noscript><img alt="OREI" height="47" src="assets/images/icons/orei-logo-1-1.svg" width="147"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="RSP" height="66" src="assets/images/icons/image-45.svg" width="139"/>
+<img alt="RSP" height="66" src="assets/images/icons/image-45.svg" width="139"/><noscript><img alt="RSP" height="66" src="assets/images/icons/image-45.svg" width="139"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="ivotemyvote" height="34" src="assets/images/icons/Ivotemyvote-1-1.svg" width="230"/>
+<img alt="ivotemyvote" height="34" src="assets/images/icons/Ivotemyvote-1-1.svg" width="230"/><noscript><img alt="ivotemyvote" height="34" src="assets/images/icons/Ivotemyvote-1-1.svg" width="230"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Boca Bargoons" height="69" src="assets/images/icons/header-bocca-bargoon-1-1.svg" width="171"/>
+<img alt="Boca Bargoons" height="69" src="assets/images/icons/header-bocca-bargoon-1-1.svg" width="171"/><noscript><img alt="Boca Bargoons" height="69" src="assets/images/icons/header-bocca-bargoon-1-1.svg" width="171"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Alrama Films" height="40" src="assets/images/icons/alarama.svg" width="244"/>
+<img alt="Alrama Films" height="40" src="assets/images/icons/alarama.svg" width="244"/><noscript><img alt="Alrama Films" height="40" src="assets/images/icons/alarama.svg" width="244"/></noscript>
 <span class="logo-title"></span>
 </li>
 <li class="brand-logo-new">
-<img alt="Chemex" height="62" src="assets/images/icons/chemex.svg" width="216"/>
+<img alt="Chemex" height="62" src="assets/images/icons/chemex.svg" width="216"/><noscript><img alt="Chemex" height="62" src="assets/images/icons/chemex.svg" width="216"/></noscript>
 <span class="logo-title"></span>
 </li>
 </ul>
@@ -431,19 +723,19 @@
 <h3 class="vibe-section__title" id="vibe-section-heading">WHAT NODE.JS DEVELOPMENT HELPS BUSINESSES DO:</h3>
 <div class="vibe-section__grid">
 <article class="vibe-card">
-<img alt="Handle 10x concurrent connections using the V8 Event Loop" class="vibe-card__icon" src="assets/cloned-theme/icons-semantic/speed.svg" decoding="async" height="48" src="assets/cloned-theme/icons-semantic/speed.svg" width="48"/>
+<img alt="Handle 10x concurrent connections using the V8 Event Loop" class="vibe-card__icon" decoding="async" height="48" src="assets/cloned-theme/icons-semantic/speed.svg" width="48"/><noscript><img alt="Handle 10x concurrent connections using the V8 Event Loop" class="vibe-card__icon" decoding="async" height="48" src="assets/cloned-theme/icons-semantic/speed.svg" width="48"/></noscript>
 <p class="vibe-card__text">Handle 10x concurrent connections using the V8 Event Loop</p>
 </article>
 <article class="vibe-card">
-<img alt="Accelerate response times via non-blocking I/O caching" class="vibe-card__icon" src="assets/cloned-theme/icons-semantic/productivity.svg" decoding="async" height="48" src="assets/cloned-theme/icons-semantic/productivity.svg" width="48"/>
+<img alt="Accelerate response times via non-blocking I/O caching" class="vibe-card__icon" decoding="async" height="48" src="assets/cloned-theme/icons-semantic/productivity.svg" width="48"/><noscript><img alt="Accelerate response times via non-blocking I/O caching" class="vibe-card__icon" decoding="async" height="48" src="assets/cloned-theme/icons-semantic/productivity.svg" width="48"/></noscript>
 <p class="vibe-card__text">Accelerate response times via non-blocking I/O caching</p>
 </article>
 <article class="vibe-card">
-<img alt="Deploy modular, lightweight microservices in minutes" class="vibe-card__icon" src="assets/cloned-theme/icons-semantic/saas-cloud.svg" decoding="async" height="48" src="assets/cloned-theme/icons-semantic/saas-cloud.svg" width="48"/>
+<img alt="Deploy modular, lightweight microservices in minutes" class="vibe-card__icon" decoding="async" height="48" src="assets/cloned-theme/icons-semantic/saas-cloud.svg" width="48"/><noscript><img alt="Deploy modular, lightweight microservices in minutes" class="vibe-card__icon" decoding="async" height="48" src="assets/cloned-theme/icons-semantic/saas-cloud.svg" width="48"/></noscript>
 <p class="vibe-card__text">Deploy modular, lightweight microservices in minutes</p>
 </article>
 <article class="vibe-card">
-<img alt="Unify development with JavaScript across frontend and backend" class="vibe-card__icon" src="assets/cloned-theme/icons-semantic/org-structure.svg" decoding="async" height="48" src="assets/cloned-theme/icons-semantic/org-structure.svg" width="48"/>
+<img alt="Unify development with JavaScript across frontend and backend" class="vibe-card__icon" decoding="async" height="48" src="assets/cloned-theme/icons-semantic/org-structure.svg" width="48"/><noscript><img alt="Unify development with JavaScript across frontend and backend" class="vibe-card__icon" decoding="async" height="48" src="assets/cloned-theme/icons-semantic/org-structure.svg" width="48"/></noscript>
 <p class="vibe-card__text">Unify development with JavaScript across frontend and backend</p>
 </article>
 </div>
@@ -451,7 +743,7 @@
 <!-- END VIBE SECTION -->
 </div>
 <div class="ads-image">
-<img alt="image" height="720" src="assets/images/icons/predictive-analytics-whatis.png" width="780"/>
+<img alt="image" height="720" src="assets/images/icons/predictive-analytics-whatis.png" width="780"/><noscript><img alt="image" height="720" src="assets/images/icons/predictive-analytics-whatis.png" width="780"/></noscript>
 </div>
 </div>
 </div>
@@ -472,42 +764,42 @@
 </div>
 <div class="ai-adoption-grid">
 <div class="adoption-card">
-<img alt="Node.js Development Consulting " height="51" src="assets/cloned-theme/icons-semantic/software-platform.svg" width="51"/>
+<img alt="Node.js Development Consulting " height="51" src="assets/cloned-theme/icons-semantic/software-platform.svg" width="51"/><noscript><img alt="Node.js Development Consulting " height="51" src="assets/cloned-theme/icons-semantic/software-platform.svg" width="51"/></noscript>
 <h3>Custom Node.js Backend Development</h3>
 <p>We build custom web applications, database layers, and server architectures using Node.js for scalable, high-performance backends.</p>
 </div>
 <div class="adoption-card">
-<img alt="Custom Node.js Model Development " height="50" src="assets/cloned-theme/icons-semantic/hierarchy-flow.svg" width="56"/>
+<img alt="Custom Node.js Model Development " height="50" src="assets/cloned-theme/icons-semantic/hierarchy-flow.svg" width="56"/><noscript><img alt="Custom Node.js Model Development " height="50" src="assets/cloned-theme/icons-semantic/hierarchy-flow.svg" width="56"/></noscript>
 <h3>Microservices Architecture</h3>
 <p>We break large monolithic systems into independent Node.js microservices that communicate via lightweight protocols like gRPC or REST APIs.</p>
 </div>
 <div class="adoption-card">
-<img alt="Node.js Development Marketing " height="59" src="assets/cloned-theme/icons-semantic/system-mapping.svg" width="60"/>
+<img alt="Node.js Development Marketing " height="59" src="assets/cloned-theme/icons-semantic/system-mapping.svg" width="60"/><noscript><img alt="Node.js Development Marketing " height="59" src="assets/cloned-theme/icons-semantic/system-mapping.svg" width="60"/></noscript>
 <h3>RESTful &amp; GraphQL API Design</h3>
 <p>We design and build secure, fast, and scalable RESTful and GraphQL APIs tailored to your application's business logic, database queries, and integration rules.</p>
 </div>
 <div class="adoption-card">
-<img alt="Retail Node.js Development " height="60" src="assets/cloned-theme/icons-semantic/call-coverage.svg" width="59"/>
+<img alt="Retail Node.js Development " height="60" src="assets/cloned-theme/icons-semantic/call-coverage.svg" width="59"/><noscript><img alt="Retail Node.js Development " height="60" src="assets/cloned-theme/icons-semantic/call-coverage.svg" width="59"/></noscript>
 <h3>Real-Time App Development</h3>
 <p>We build real-time communication tools, live chat apps, and streaming platforms using WebSockets and Socket.io for instantaneous data delivery.</p>
 </div>
 <div class="adoption-card">
-<img alt="Node.js Development in Healthcare " height="53" src="assets/cloned-theme/icons-semantic/e-commerce-store.svg" width="54"/>
+<img alt="Node.js Development in Healthcare " height="53" src="assets/cloned-theme/icons-semantic/e-commerce-store.svg" width="54"/><noscript><img alt="Node.js Development in Healthcare " height="53" src="assets/cloned-theme/icons-semantic/e-commerce-store.svg" width="54"/></noscript>
 <h3>Headless Ecommerce Backends</h3>
 <p>We connect headless Shopify, Magento, or WooCommerce frontends to custom Node.js middleware to manage inventory, payments, and checkout flows.</p>
 </div>
 <div class="adoption-card">
-<img alt="Node.js APIs Analytics " height="61" src="assets/cloned-theme/icons-semantic/web-application.svg" width="53"/>
+<img alt="Node.js APIs Analytics " height="61" src="assets/cloned-theme/icons-semantic/web-application.svg" width="53"/><noscript><img alt="Node.js APIs Analytics " height="61" src="assets/cloned-theme/icons-semantic/web-application.svg" width="53"/></noscript>
 <h3>Express &amp; NestJS App Development</h3>
 <p>We build robust, maintainable server applications using industry-standard frameworks like Express, Koa, or NestJS for clean architectural structure.</p>
 </div>
 <div class="adoption-card">
-<img alt="Node.js Development Software Integration " height="55" src="assets/cloned-theme/icons-semantic/productivity.svg" width="62"/>
+<img alt="Node.js Development Software Integration " height="55" src="assets/cloned-theme/icons-semantic/productivity.svg" width="62"/><noscript><img alt="Node.js Development Software Integration " height="55" src="assets/cloned-theme/icons-semantic/productivity.svg" width="62"/></noscript>
 <h3>Node.js Performance Tuning</h3>
 <p>We audit your Node.js apps, optimize database queries, resolve memory leaks, configure clustering, and adjust event loop settings to maximize execution speed.</p>
 </div>
 <div class="adoption-card">
-<img alt="Model Monitoring and Retraining " height="36" src="assets/cloned-theme/icons-semantic/customer-support-ticket.svg" width="32"/>
+<img alt="Model Monitoring and Retraining " height="36" src="assets/cloned-theme/icons-semantic/customer-support-ticket.svg" width="32"/><noscript><img alt="Model Monitoring and Retraining " height="36" src="assets/cloned-theme/icons-semantic/customer-support-ticket.svg" width="32"/></noscript>
 <h3>24/7 Managed Support</h3>
 <p>We provide round-the-clock server monitoring, security patching, log analysis, automatic scaling responses, and database optimization for Node.js backends.</p>
 </div>
@@ -531,32 +823,32 @@
 </div>
 <div class="industry-solutions-grid">
 <div class="industry-card">
-<img alt="Retail and Ecommerce " height="55" src="assets/cloned-theme/icons-semantic/marketplace-shop.svg" width="53"/>
+<img alt="Retail and Ecommerce " height="55" src="assets/cloned-theme/icons-semantic/marketplace-shop.svg" width="53"/><noscript><img alt="Retail and Ecommerce " height="55" src="assets/cloned-theme/icons-semantic/marketplace-shop.svg" width="53"/></noscript>
 <h3>Retail &amp; Ecommerce</h3>
 <p>We build high-concurrency Node.js backends and headless ecommerce gateways to handle traffic spikes during peak sales events like Black Friday.</p>
 </div>
 <div class="industry-card">
-<img alt="Healthcare " height="55" src="assets/cloned-theme/icons-semantic/customer-care.svg" width="47"/>
+<img alt="Healthcare " height="55" src="assets/cloned-theme/icons-semantic/customer-care.svg" width="47"/><noscript><img alt="Healthcare " height="55" src="assets/cloned-theme/icons-semantic/customer-care.svg" width="47"/></noscript>
 <h3>Healthcare &amp; Life Sciences</h3>
 <p>We develop secure, audit-ready Node.js APIs with data encryption and secure database connectors that comply with medical privacy standards.</p>
 </div>
 <div class="industry-card">
-<img alt="Financial Services " height="57" src="assets/cloned-theme/icons-semantic/revenue.svg" width="60"/>
+<img alt="Financial Services " height="57" src="assets/cloned-theme/icons-semantic/revenue.svg" width="60"/><noscript><img alt="Financial Services " height="57" src="assets/cloned-theme/icons-semantic/revenue.svg" width="60"/></noscript>
 <h3>Financial Services</h3>
 <p>We build fast, secure transaction processing services, real-time ledger synchronization, and robust database layers using Node.js.</p>
 </div>
 <div class="industry-card">
-<img alt="Node.js Development Marketing " height="58" src="assets/cloned-theme/icons-semantic/saas-cloud.svg" width="58"/>
+<img alt="Node.js Development Marketing " height="58" src="assets/cloned-theme/icons-semantic/saas-cloud.svg" width="58"/><noscript><img alt="Node.js Development Marketing " height="58" src="assets/cloned-theme/icons-semantic/saas-cloud.svg" width="58"/></noscript>
 <h3>SaaS &amp; Software Platforms</h3>
 <p>We design scalable, microservices-based Node.js backend architectures and APIs that allow SaaS platforms to scale compute dynamically.</p>
 </div>
 <div class="industry-card">
-<img alt="Node.js APIs Analytics " height="58" src="assets/cloned-theme/icons-semantic/operations-workflow.svg" width="51"/>
+<img alt="Node.js APIs Analytics " height="58" src="assets/cloned-theme/icons-semantic/operations-workflow.svg" width="51"/><noscript><img alt="Node.js APIs Analytics " height="58" src="assets/cloned-theme/icons-semantic/operations-workflow.svg" width="51"/></noscript>
 <h3>Logistics &amp; Supply Chain</h3>
 <p>We build real-time inventory tracking, delivery dispatching engines, and GPS tracking servers using Node.js and WebSockets.</p>
 </div>
 <div class="industry-card">
-<img alt="Manufacturing and Supply Chain " height="59" src="assets/cloned-theme/icons-semantic/charts-analytics.svg" width="60"/>
+<img alt="Manufacturing and Supply Chain " height="59" src="assets/cloned-theme/icons-semantic/charts-analytics.svg" width="60"/><noscript><img alt="Manufacturing and Supply Chain " height="59" src="assets/cloned-theme/icons-semantic/charts-analytics.svg" width="60"/></noscript>
 <h3>Data Analytics &amp; BI</h3>
 <p>We construct high-speed data ingestion microservices and pipelines in Node.js to stream and process large datasets efficiently.</p>
 </div>
@@ -574,13 +866,13 @@
 </div>
 <div class="solutions-section">
 <div class="image-column">
-<img alt="Why Businesses Choose Rjcommerce  Over Other Node.js Development Firms" height="900" src="assets/images/node-architecture.jpg" width="780"/>
+<img alt="Why Businesses Choose Rjcommerce  Over Other Node.js Development Firms" height="900" src="assets/images/node-architecture.jpg" width="780"/><noscript><img alt="Why Businesses Choose Rjcommerce  Over Other Node.js Development Firms" height="900" src="assets/images/node-architecture.jpg" width="780"/></noscript>
 </div>
 <div class="content-column">
 <div class="solution-right-space"></div>
 <div class="solution-item">
 <div class="solution-icon">
-<img alt="High-Performance Event Loop " class="solution-icon" src="assets/cloned-theme/icons-semantic/speed.svg" height="42" src="assets/cloned-theme/icons-semantic/speed.svg" width="42"/>
+<img alt="High-Performance Event Loop " class="solution-icon" height="42" src="assets/cloned-theme/icons-semantic/speed.svg" width="42"/><noscript><img alt="High-Performance Event Loop " class="solution-icon" height="42" src="assets/cloned-theme/icons-semantic/speed.svg" width="42"/></noscript>
 </div>
 <div>
 <h3 class="solution-title">High-Performance Event Loop</h3>
@@ -589,7 +881,7 @@
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<img alt="Unified Full-Stack Codebase " class="solution-icon" src="assets/cloned-theme/icons-semantic/org-structure.svg" height="54" src="assets/cloned-theme/icons-semantic/org-structure.svg" width="54"/>
+<img alt="Unified Full-Stack Codebase " class="solution-icon" height="54" src="assets/cloned-theme/icons-semantic/org-structure.svg" width="54"/><noscript><img alt="Unified Full-Stack Codebase " class="solution-icon" height="54" src="assets/cloned-theme/icons-semantic/org-structure.svg" width="54"/></noscript>
 </div>
 <div>
 <h3 class="solution-title">Unified Full-Stack Codebase</h3>
@@ -598,7 +890,7 @@
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<img alt="Microservices and Serverless " class="solution-icon" src="assets/cloned-theme/icons-semantic/saas-cloud.svg" height="51" src="assets/cloned-theme/icons-semantic/saas-cloud.svg" width="54"/>
+<img alt="Microservices and Serverless " class="solution-icon" height="51" src="assets/cloned-theme/icons-semantic/saas-cloud.svg" width="54"/><noscript><img alt="Microservices and Serverless " class="solution-icon" height="51" src="assets/cloned-theme/icons-semantic/saas-cloud.svg" width="54"/></noscript>
 </div>
 <div>
 <h3 class="solution-title">Microservices and Serverless</h3>
@@ -607,7 +899,7 @@
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<img alt="Headless Ecommerce Integration " class="solution-icon" src="assets/cloned-theme/icons-semantic/marketplace-shop.svg" height="54" src="assets/cloned-theme/icons-semantic/marketplace-shop.svg" width="54"/>
+<img alt="Headless Ecommerce Integration " class="solution-icon" height="54" src="assets/cloned-theme/icons-semantic/marketplace-shop.svg" width="54"/><noscript><img alt="Headless Ecommerce Integration " class="solution-icon" height="54" src="assets/cloned-theme/icons-semantic/marketplace-shop.svg" width="54"/></noscript>
 </div>
 <div>
 <h3 class="solution-title">Headless Ecommerce Integration</h3>
@@ -616,7 +908,7 @@
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<img alt="Rich Package Ecosystem " class="solution-icon" src="assets/cloned-theme/icons-semantic/b2b-network.svg" height="56" src="assets/cloned-theme/icons-semantic/b2b-network.svg" width="56"/>
+<img alt="Rich Package Ecosystem " class="solution-icon" height="56" src="assets/cloned-theme/icons-semantic/b2b-network.svg" width="56"/><noscript><img alt="Rich Package Ecosystem " class="solution-icon" height="56" src="assets/cloned-theme/icons-semantic/b2b-network.svg" width="56"/></noscript>
 </div>
 <div>
 <h3 class="solution-title">Rich Package Ecosystem</h3>
@@ -625,7 +917,7 @@
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<img alt="Node.js Performance Tuning " class="solution-icon" src="assets/cloned-theme/icons-semantic/productivity.svg" height="51" src="assets/cloned-theme/icons-semantic/productivity.svg" width="54"/>
+<img alt="Node.js Performance Tuning " class="solution-icon" height="51" src="assets/cloned-theme/icons-semantic/productivity.svg" width="54"/><noscript><img alt="Node.js Performance Tuning " class="solution-icon" height="51" src="assets/cloned-theme/icons-semantic/productivity.svg" width="54"/></noscript>
 </div>
 <div>
 <h3 class="solution-title">Node.js Performance Tuning</h3>
@@ -674,7 +966,7 @@
 <div class="results-grid">
 <div class="result-box">
 <div>
-<img alt="" height="16" src="assets/images/icons/mlops-services-icon-7.svg" width="30"/>
+<img alt="" height="16" src="assets/images/icons/mlops-services-icon-7.svg" width="30"/><noscript><img alt="" height="16" src="assets/images/icons/mlops-services-icon-7.svg" width="30"/></noscript>
 </div>
 <div>
 <span>Reduction in stockout incidents across core lines</span>
@@ -683,7 +975,7 @@
 </div>
 <div class="result-box">
 <div>
-<img alt="" height="24" src="assets/images/icons/mlops-services-icon-6.svg" width="36"/>
+<img alt="" height="24" src="assets/images/icons/mlops-services-icon-6.svg" width="36"/><noscript><img alt="" height="24" src="assets/images/icons/mlops-services-icon-6.svg" width="36"/></noscript>
 </div>
 <div>
 <span>Reduction in excess inventory holding costs </span>
@@ -692,7 +984,7 @@
 </div>
 <div class="result-box">
 <div>
-<img alt="" height="37" src="assets/images/icons/mlops-services-icon-5.svg" width="37"/>
+<img alt="" height="37" src="assets/images/icons/mlops-services-icon-5.svg" width="37"/><noscript><img alt="" height="37" src="assets/images/icons/mlops-services-icon-5.svg" width="37"/></noscript>
 </div>
 <div>
 <span>Months to positive ROI after deployment</span>
@@ -726,7 +1018,7 @@
 <div class="results-grid">
 <div class="result-box">
 <div>
-<img alt="" height="36" src="assets/images/icons/mlops-services-icon-5.svg" width="38"/>
+<img alt="" height="36" src="assets/images/icons/mlops-services-icon-4.svg" width="38"/><noscript><img alt="" height="36" src="assets/images/icons/mlops-services-icon-4.svg" width="38"/></noscript>
 </div>
 <div>
 <span>Churn Risk Detection Accuracy  </span>
@@ -735,7 +1027,7 @@
 </div>
 <div class="result-box">
 <div>
-<img alt="" height="35" src="assets/images/icons/mlops-services-icon-7.svg" width="35"/>
+<img alt="" height="35" src="assets/images/icons/mlops-services-icon-3.svg" width="35"/><noscript><img alt="" height="35" src="assets/images/icons/mlops-services-icon-3.svg" width="35"/></noscript>
 </div>
 <div>
 <span>Reduction in monthly churn rate within 6 months</span>
@@ -744,7 +1036,7 @@
 </div>
 <div class="result-box">
 <div>
-<img alt="" height="29" src="assets/images/icons/mlops-services-icon-6.svg" width="39"/>
+<img alt="" height="29" src="assets/images/icons/mlops-services-icon-2.svg" width="39"/><noscript><img alt="" height="29" src="assets/images/icons/mlops-services-icon-2.svg" width="39"/></noscript>
 </div>
 <div>
 <span>ROI on model development cost within first year</span>
@@ -778,7 +1070,7 @@
 <div class="results-grid">
 <div class="result-box">
 <div>
-<img alt="" height="39" src="assets/images/icons/mlops-services-icon-5.svg" width="33"/>
+<img alt="" height="39" src="assets/images/icons/mlops-services-icon-1.svg" width="33"/><noscript><img alt="" height="39" src="assets/images/icons/mlops-services-icon-1.svg" width="33"/></noscript>
 </div>
 <div>
 <span>Reduction in Consultant Attrition  </span>
@@ -787,7 +1079,7 @@
 </div>
 <div class="result-box">
 <div>
-<img alt="" height="16" src="assets/images/icons/mlops-services-icon-7.svg" width="30"/>
+<img alt="" height="16" src="assets/images/icons/mlops-services-icon-7.svg" width="30"/><noscript><img alt="" height="16" src="assets/images/icons/mlops-services-icon-7.svg" width="30"/></noscript>
 </div>
 <div>
 <span>Early Attrition Risk Detection  </span>
@@ -796,7 +1088,7 @@
 </div>
 <div class="result-box">
 <div>
-<img alt="" height="37" src="assets/images/icons/mlops-services-icon-5.svg" width="37"/>
+<img alt="" height="37" src="assets/images/icons/mlops-services-icon-5.svg" width="37"/><noscript><img alt="" height="37" src="assets/images/icons/mlops-services-icon-5.svg" width="37"/></noscript>
 </div>
 <div>
 <span>Annual Hiring Cost Savings </span>
@@ -827,7 +1119,7 @@
 <div class="item_inner border_radius">
 <div class="item_content">
 <figure>
-<img alt="" height="32" src="assets/images/icons/step-1.svg" width="88"/>
+<img alt="" height="32" src="assets/images/icons/step-1.svg" width="88"/><noscript><img alt="" height="32" src="assets/images/icons/step-1.svg" width="88"/></noscript>
 </figure>
 <h4>API &amp; Architecture Design</h4>
 <p>We define the endpoints, database schema, data models, and server infrastructure architecture needed to support your application logic.</p>
@@ -838,7 +1130,7 @@
 <div class="item_inner border_radius">
 <div class="item_content">
 <figure>
-<img alt="" height="33" src="assets/images/icons/step-2.svg" width="97"/>
+<img alt="" height="33" src="assets/images/icons/step-2.svg" width="97"/><noscript><img alt="" height="33" src="assets/images/icons/step-2.svg" width="97"/></noscript>
 </figure>
 <h4>Node.js Backend Development</h4>
 <p>We write clean, modular, and asynchronous JavaScript or TypeScript code using Express or NestJS, setting up database connectors and middleware.</p>
@@ -849,7 +1141,7 @@
 <div class="item_inner border_radius">
 <div class="item_content">
 <figure>
-<img alt="" height="33" src="assets/images/icons/step-3.svg" width="97"/>
+<img alt="" height="33" src="assets/images/icons/step-3.svg" width="97"/><noscript><img alt="" height="33" src="assets/images/icons/step-3.svg" width="97"/></noscript>
 </figure>
 <h4>API Integration &amp; Testing</h4>
 <p>We connect frontend components to backend endpoints, perform integration tests, run unit tests, and audit security configurations.</p>
@@ -860,7 +1152,7 @@
 <div class="item_inner border_radius">
 <div class="item_content">
 <figure>
-<img alt="" height="32" src="assets/images/icons/step-4.svg" width="97"/>
+<img alt="" height="32" src="assets/images/icons/step-4.svg" width="97"/><noscript><img alt="" height="32" src="assets/images/icons/step-4.svg" width="97"/></noscript>
 </figure>
 <h4>Production Deployment</h4>
 <p>We deploy your server applications to AWS or other cloud hosting providers, setting up automated CI/CD pipelines and DNS configurations.</p>
@@ -871,7 +1163,7 @@
 <div class="item_inner border_radius">
 <div class="item_content">
 <figure>
-<img alt="" height="32" src="assets/images/icons/step-5.svg" width="98"/>
+<img alt="" height="32" src="assets/images/icons/step-5.svg" width="98"/><noscript><img alt="" height="32" src="assets/images/icons/step-5.svg" width="98"/></noscript>
 </figure>
 <h4>24/7 Support &amp; Tuning</h4>
 <p>We monitor application error logs, database query runtimes, and system resources, continually tuning performance to maximize throughput.</p>
@@ -947,7 +1239,7 @@
 <article class="testimonial-card">
 <div>
 <div aria-label="5 star rating" class="testimonial-rating">
-<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/>
+<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/><noscript><img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/></noscript>
 </div>
 <p class="testimonial-quote">
                         “Commerce Pundit has been an incredible partner in scaling our digital marketing and e-commerce growth. Their structured approach, speed, transparency, and expertise delivered impressive results, including significant revenue growth and ROI improvement. They truly feel like an extension of our team.”
@@ -955,7 +1247,7 @@
 </div>
 <div>
 <div class="testimonial-author">
-<img alt="Kevin XU" class="testimonial-avatar" src="/wp-content/uploads/2026/01/plantatorem_thumbh.jpeg" height="1600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201279%201600'%3E%3C/svg%3E" width="1279"/>
+<img alt="Kevin XU" class="testimonial-avatar" height="1600" src="/wp-content/uploads/2026/01/plantatorem_thumbh.jpeg" width="1279"/><noscript><img alt="Kevin XU" class="testimonial-avatar" height="1600" src="/wp-content/uploads/2026/01/plantatorem_thumbh.jpeg" width="1279"/></noscript>
 <div>
 <h4>Kevin XU</h4>
 <p>President of Pacific Home And Garden</p>
@@ -976,7 +1268,7 @@
 <article class="testimonial-card">
 <div>
 <div aria-label="5 star rating" class="testimonial-rating">
-<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/>
+<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/><noscript><img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/></noscript>
 </div>
 <p class="testimonial-quote">
                         “It’s hard to believe we’ve been working together since 2023. Commerce Pundit has been a great partner in building and refining our online presence, helping turn our vision into reality. We’re grateful for the support and excited for what’s ahead.”
@@ -984,7 +1276,7 @@
 </div>
 <div>
 <div class="testimonial-author">
-<img alt="Derek Nobs" class="testimonial-avatar" src="/wp-content/uploads/2026/04/simpl-client-two-updated.png" height="599" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20599'%3E%3C/svg%3E" width="800"/>
+<img alt="Derek Nobs" class="testimonial-avatar" height="599" src="/wp-content/uploads/2026/04/simpl-client-two-updated.png" width="800"/><noscript><img alt="Derek Nobs" class="testimonial-avatar" height="599" src="/wp-content/uploads/2026/04/simpl-client-two-updated.png" width="800"/></noscript>
 <div>
 <h4>Derek Nobs</h4>
 <p>President, SIMPL</p>
@@ -1005,7 +1297,7 @@
 <article class="testimonial-card">
 <div>
 <div aria-label="5 star rating" class="testimonial-rating">
-<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/>
+<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/><noscript><img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/></noscript>
 </div>
 <p class="testimonial-quote">
                         “We’ve worked with a lot of teams, but Commerce Pundit stands out for one reason, they do what they say. On time, with attention to detail, and with strong ongoing support that’s helped us keep moving forward.”
@@ -1013,7 +1305,7 @@
 </div>
 <div>
 <div class="testimonial-author">
-<img alt="Christopher Gagnon" class="testimonial-avatar" src="/wp-content/uploads/2026/04/sport-decals-client.png" height="318" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20425%20318'%3E%3C/svg%3E" width="425"/>
+<img alt="Christopher Gagnon" class="testimonial-avatar" height="318" src="/wp-content/uploads/2026/04/sport-decals-client.png" width="425"/><noscript><img alt="Christopher Gagnon" class="testimonial-avatar" height="318" src="/wp-content/uploads/2026/04/sport-decals-client.png" width="425"/></noscript>
 <div>
 <h4>Christopher Gagnon</h4>
 <p>President, Sport Decals</p>
@@ -1034,7 +1326,7 @@
 <article class="testimonial-card">
 <div>
 <div aria-label="5 star rating" class="testimonial-rating">
-<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/>
+<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/><noscript><img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/></noscript>
 </div>
 <p class="testimonial-quote">
                         “Commerce Pundit launched our business online for the first time by designing and developing a seamless e-commerce website from the grounted up. Their digital marketing expertise and dedication to our growth perfectly delivered on their promise to “Design, Develop, Grow.” Highly recommended!”
@@ -1042,7 +1334,7 @@
 </div>
 <div>
 <div class="testimonial-author">
-<img alt="Eric Truong" class="testimonial-avatar" src="/wp-content/uploads/2025/06/Client_testimonial.png" height="392" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20595%20392'%3E%3C/svg%3E" width="595"/>
+<img alt="Eric Truong" class="testimonial-avatar" height="392" src="/wp-content/uploads/2025/06/Client_testimonial.png" width="595"/><noscript><img alt="Eric Truong" class="testimonial-avatar" height="392" src="/wp-content/uploads/2025/06/Client_testimonial.png" width="595"/></noscript>
 <div>
 <h4>Eric Truong</h4>
 <p>CEO, LA Nails Supply</p>
@@ -1063,7 +1355,7 @@
 <article class="testimonial-card">
 <div>
 <div aria-label="5 star rating" class="testimonial-rating">
-<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/>
+<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/><noscript><img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/></noscript>
 </div>
 <p class="testimonial-quote">
                         “Over the past 5 years, Commerce Pundit has consistently delivered for us. They built custom tools that connect our systems, simplify our data, and make daily decisions easier. More than a vendor, they’ve been a true partner.”
@@ -1071,7 +1363,7 @@
 </div>
 <div>
 <div class="testimonial-author">
-<img alt="Ramzi Chamoun" class="testimonial-avatar" src="/wp-content/uploads/2026/04/thurmalclub-client.png" height="318" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20425%20318'%3E%3C/svg%3E" width="425"/>
+<img alt="Ramzi Chamoun" class="testimonial-avatar" height="318" src="/wp-content/uploads/2026/04/thurmalclub-client.png" width="425"/><noscript><img alt="Ramzi Chamoun" class="testimonial-avatar" height="318" src="/wp-content/uploads/2026/04/thurmalclub-client.png" width="425"/></noscript>
 <div>
 <h4>Ramzi Chamoun</h4>
 <p>CFO, Tower Energy Group &amp; Thermal Club</p>
@@ -1092,7 +1384,7 @@
 <article class="testimonial-card">
 <div>
 <div aria-label="5 star rating" class="testimonial-rating">
-<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/>
+<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/><noscript><img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/></noscript>
 </div>
 <p class="testimonial-quote">
                         “Our website was completely transformed—better quality, smoother user experience. With expert support in SEO, our digital presence grew fast. For premium e-commerce solutions, we highly recommend partnering with Commerce Pundit.”
@@ -1100,7 +1392,7 @@
 </div>
 <div>
 <div class="testimonial-author">
-<img alt="Eric Jolly" class="testimonial-avatar" src="/wp-content/uploads/2025/06/testimonial-img-1.png" height="335" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20506%20335'%3E%3C/svg%3E" width="506"/>
+<img alt="Eric Jolly" class="testimonial-avatar" height="335" src="/wp-content/uploads/2025/06/testimonial-img-1.png" width="506"/><noscript><img alt="Eric Jolly" class="testimonial-avatar" height="335" src="/wp-content/uploads/2025/06/testimonial-img-1.png" width="506"/></noscript>
 <div>
 <h4>Eric Jolly</h4>
 <p>CEO, Maxtrac Suspension</p>
@@ -1121,7 +1413,7 @@
 <article class="testimonial-card">
 <div>
 <div aria-label="5 star rating" class="testimonial-rating">
-<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/>
+<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/><noscript><img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/></noscript>
 </div>
 <p class="testimonial-quote">
                         “Commerce Pundit has been an incredible partner in scaling our digital marketing and e-commerce growth. Their structured approach, speed, transparency, and expertise delivered impressive results, including significant revenue growth and ROI improvement. They truly feel like an extension of our team.”
@@ -1129,7 +1421,7 @@
 </div>
 <div>
 <div class="testimonial-author">
-<img alt="Kevin XU" class="testimonial-avatar" src="/wp-content/uploads/2026/01/plantatorem_thumbh.jpeg" height="1600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201279%201600'%3E%3C/svg%3E" width="1279"/>
+<img alt="Kevin XU" class="testimonial-avatar" height="1600" src="/wp-content/uploads/2026/01/plantatorem_thumbh.jpeg" width="1279"/><noscript><img alt="Kevin XU" class="testimonial-avatar" height="1600" src="/wp-content/uploads/2026/01/plantatorem_thumbh.jpeg" width="1279"/></noscript>
 <div>
 <h4>Kevin XU</h4>
 <p>President of Pacific Home And Garden</p>
@@ -1150,7 +1442,7 @@
 <article class="testimonial-card">
 <div>
 <div aria-label="5 star rating" class="testimonial-rating">
-<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/>
+<img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/><noscript><img alt="Five-star client rating graphic for testimonials" height="15" src="assets/images/icons/star-image.png" width="86"/></noscript>
 </div>
 <p class="testimonial-quote">
                         “It’s hard to believe we’ve been working together since 2023. Commerce Pundit has been a great partner in building and refining our online presence, helping turn our vision into reality. We’re grateful for the support and excited for what’s ahead.”
@@ -1158,7 +1450,7 @@
 </div>
 <div>
 <div class="testimonial-author">
-<img alt="Derek Nobs" class="testimonial-avatar" src="/wp-content/uploads/2026/04/simpl-client-two-updated.png" height="599" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20599'%3E%3C/svg%3E" width="800"/>
+<img alt="Derek Nobs" class="testimonial-avatar" height="599" src="/wp-content/uploads/2026/04/simpl-client-two-updated.png" width="800"/><noscript><img alt="Derek Nobs" class="testimonial-avatar" height="599" src="/wp-content/uploads/2026/04/simpl-client-two-updated.png" width="800"/></noscript>
 <div>
 <h4>Derek Nobs</h4>
 <p>President, SIMPL</p>
@@ -1311,11 +1603,7 @@
 <!-- Site Footer Start Here -->
 
 <!-- ================= Footer ================= -->
-<footer class="page-footer-wrapper" style="background: #111; padding: 20px; text-align: center; color: #777;">
-<div class="container">
-<p>Copyright &copy; 2026 Rjcommerce. All rights reserved.</p>
-</div>
-</footer>
+<footer class="page-footer-wrapper" data-color-class="light" data-wpr-lazyrender="1" style="background: #111; padding: 20px; text-align: center; color: #777;"><div class_="container"><p>Copyright © 2026 Rjcommerce. All rights reserved.</p></div></footer>
 <!-- ================= End Footer ================= -->
 <div class="scrollup"></div>
 </div>
@@ -1574,7 +1862,10 @@ var nbcpf = {"ajaxurl":"#/wp-admin/admin-ajax.php"};
 "use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
 //# sourceURL=rocket-browser-checker-js-after
 </script>
-
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"#","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
 <script id="rocket-preload-links-js-after">
 (function() {
 "use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
@@ -1607,14 +1898,26 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 //# sourceURL=wp-i18n-js-after
 </script>
 <script data-minify="1" data-rocket-defer="" defer="" id="swv-js" src="#/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1784036591"></script>
-
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.#\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+//# sourceURL=contact-form-7-js-before
+</script>
 <script data-minify="1" data-rocket-defer="" defer="" id="contact-form-7-js" src="#/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1784036591"></script>
-
+<script id="cf7mls-js-extra">
+var cf7mls_object = {"ajax_url":"#/wp-json/","is_rtl":"","disable_submit":"true","cf7mls_error_message":"","scroll_step":"true","scroll_first_error":"true","disable_enter_key":"false","check_step_before_submit":"true"};
+//# sourceURL=cf7mls-js-extra
+</script>
 <script data-minify="1" data-rocket-defer="" defer="" id="cf7mls-js" src="#/wp-content/cache/min/1/wp-content/plugins/cf7-multi-step/assets/frontend/js/cf7mls.js?ver=1784036591"></script>
 <script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
 if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
 images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
-if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script async="" data-no-minify="1" src="#/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt,l){var t='<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360">',a='<button class="play" aria-label="Play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi/ID/hqdefault.jpg'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});</script>
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script async="" data-no-minify="1" src="#/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt,l){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="Play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi/ID/hqdefault.jpg'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});</script>
 <script data-minify="1" data-rocket-defer="" defer="" src="#/wp-content/cache/min/1/js/widget.js?ver=1784036591"></script>
 <script type="text/rocketlazyloadscript">
   window.fcWidget.init({
