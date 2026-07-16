@@ -455,6 +455,30 @@ td.mob-top-0 {padding-top:0px !important;}
             margin-bottom: 10px !important;
         }
         
+        /* Tech stack logo grid accordion styles */
+        .logo-grid {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            align-items: center !important;
+            gap: 20px 30px !important;
+            margin-top: 15px !important;
+            padding: 10px 0 !important;
+        }
+        .logo-grid__img {
+            height: 45px !important;
+            width: auto !important;
+            max-width: 140px !important;
+            object-fit: contain !important;
+            display: inline-block !important;
+            filter: grayscale(100%) !important;
+            opacity: 0.65 !important;
+            transition: all 0.3s ease !important;
+        }
+        .logo-grid__img:hover {
+            filter: grayscale(0%) !important;
+            opacity: 1 !important;
+        }
+        
         /* Stats Grid fallback layout */
         .stats-grid {
             display: flex !important;
@@ -613,19 +637,19 @@ td.mob-top-0 {padding-top:0px !important;}
 <h3 class="vibe-section__title" id="vibe-section-heading">WHAT NODE.JS DEVELOPMENT HELPS BUSINESSES DO:</h3>
 <div class="vibe-section__grid">
 <article class="vibe-card">
-<svg class="vibe-card__icon" data-alt="Forecast demand before stockouts happen " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="vibe-card__icon" data-alt="Forecast demand before stockouts happen " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
 </svg>
 <p class="vibe-card__text">Handle 10x concurrent connections using the V8 Event Loop</p>
 </article>
 <article class="vibe-card">
-<svg class="vibe-card__icon" data-alt="Identify churning customers weeks in advance " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="vibe-card__icon" data-alt="Identify churning customers weeks in advance " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
 </svg>
 <p class="vibe-card__text">Accelerate response times via non-blocking I/O caching</p>
 </article>
 <article class="vibe-card">
-<svg class="vibe-card__icon" data-alt="Target Conversion-Ready Audiences  " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="vibe-card__icon" data-alt="Target Conversion-Ready Audiences  " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path>
 <path d="M12 22V12"></path>
 <polyline points="3.29 7 12 12 20.71 7"></polyline>
@@ -634,7 +658,7 @@ td.mob-top-0 {padding-top:0px !important;}
 <p class="vibe-card__text">Deploy modular, lightweight microservices in minutes</p>
 </article>
 <article class="vibe-card">
-<svg class="vibe-card__icon" data-alt="Detect operational and financial risk early " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="vibe-card__icon" data-alt="Detect operational and financial risk early " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="m16 18 6-6-6-6"></path>
 <path d="m8 6-6 6 6 6"></path>
 </svg>
@@ -666,7 +690,7 @@ td.mob-top-0 {padding-top:0px !important;}
 </div>
 <div class="ai-adoption-grid">
 <div class="adoption-card">
-<svg class="service-card__icon" data-alt="Predictive Analytics Consulting " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="service-card__icon" data-alt="Predictive Analytics Consulting " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 20v2"></path>
 <path d="M12 2v2"></path>
 <path d="M17 20v2"></path>
@@ -679,17 +703,17 @@ td.mob-top-0 {padding-top:0px !important;}
 <path d="M20 7h2"></path>
 <path d="M7 20v2"></path>
 <path d="M7 2v2"></path>
-<rect rx="2" x="4" y="4"></rect>
-<rect rx="1" x="8" y="8"></rect>
+<rect height="16" rx="2" width="16" x="4" y="4"></rect>
+<rect height="8" rx="1" width="8" x="8" y="8"></rect>
 </svg><noscript><img alt="Node.js Development Consulting " height="51" src="assets/images/icons/predictive-analytics-icons-10.svg" width="51"/></noscript>
 <h3>Custom Node.js Backend Development</h3>
 <p>We build custom web applications, database layers, and server architectures using Node.js for scalable, high-performance backends.</p>
 </div>
 <div class="adoption-card">
-<svg class="service-card__icon" data-alt="Custom Predictive Model Development " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<rect rx="1" x="16" y="16"></rect>
-<rect rx="1" x="2" y="16"></rect>
-<rect rx="1" x="9" y="2"></rect>
+<svg class="service-card__icon" data-alt="Custom Predictive Model Development " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect height="6" rx="1" width="6" x="16" y="16"></rect>
+<rect height="6" rx="1" width="6" x="2" y="16"></rect>
+<rect height="6" rx="1" width="6" x="9" y="2"></rect>
 <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path>
 <path d="M12 12V8"></path>
 </svg><noscript><img alt="Custom Node.js Model Development " height="50" src="assets/images/icons/predictive-analytics-icons-11.svg" width="56"/></noscript>
@@ -697,7 +721,7 @@ td.mob-top-0 {padding-top:0px !important;}
 <p>We break large monolithic systems into independent Node.js microservices that communicate via lightweight protocols like gRPC or REST APIs.</p>
 </div>
 <div class="adoption-card">
-<svg class="service-card__icon" data-alt="Predictive Analytics Marketing " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="service-card__icon" data-alt="Predictive Analytics Marketing " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2"></path>
 <path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06"></path>
 <path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8"></path>
@@ -706,14 +730,14 @@ td.mob-top-0 {padding-top:0px !important;}
 <p>We design and build secure, fast, and scalable RESTful and GraphQL APIs tailored to your application's business logic, database queries, and integration rules.</p>
 </div>
 <div class="adoption-card">
-<svg class="service-card__icon" data-alt="Retail Predictive Analytics " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="service-card__icon" data-alt="Retail Predictive Analytics " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path>
 </svg><noscript><img alt="Retail Node.js Development " height="60" src="assets/images/icons/openAI-ads-services-icon25.svg" width="59"/></noscript>
 <h3>Real-Time App Development</h3>
 <p>We build real-time communication tools, live chat apps, and streaming platforms using WebSockets and Socket.io for instantaneous data delivery.</p>
 </div>
 <div class="adoption-card">
-<svg class="service-card__icon" data-alt="Predictive Analytics in Healthcare " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="service-card__icon" data-alt="Predictive Analytics in Healthcare " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <circle cx="8" cy="21" r="1"></circle>
 <circle cx="19" cy="21" r="1"></circle>
 <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
@@ -722,9 +746,9 @@ td.mob-top-0 {padding-top:0px !important;}
 <p>We connect headless Shopify, Magento, or WooCommerce frontends to custom Node.js middleware to manage inventory, payments, and checkout flows.</p>
 </div>
 <div class="adoption-card">
-<svg class="service-card__icon" data-alt="Predictive HR Analytics " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<rect rx="2" ry="2" x="2" y="2"></rect>
-<rect rx="2" ry="2" x="2" y="14"></rect>
+<svg class="service-card__icon" data-alt="Predictive HR Analytics " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect height="8" rx="2" ry="2" width="20" x="2" y="2"></rect>
+<rect height="8" rx="2" ry="2" width="20" x="2" y="14"></rect>
 <line x1="6" x2="6.01" y1="6" y2="6"></line>
 <line x1="6" x2="6.01" y1="18" y2="18"></line>
 </svg><noscript><img alt="Node.js APIs Analytics " height="61" src="assets/images/icons/predictive-analytics-icons-13.svg" width="53"/></noscript>
@@ -732,7 +756,7 @@ td.mob-top-0 {padding-top:0px !important;}
 <p>We build robust, maintainable server applications using industry-standard frameworks like Express, Koa, or NestJS for clean architectural structure.</p>
 </div>
 <div class="adoption-card">
-<svg class="service-card__icon" data-alt="Predictive Analytics Software Integration " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="service-card__icon" data-alt="Predictive Analytics Software Integration " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="m12 14 4-4"></path>
 <path d="M3.34 19a10 10 0 1 1 17.32 0"></path>
 </svg><noscript><img alt="Node.js Development Software Integration " height="55" src="assets/images/icons/predictive-analytics-icons-14.svg" width="62"/></noscript>
@@ -740,7 +764,7 @@ td.mob-top-0 {padding-top:0px !important;}
 <p>We audit your Node.js apps, optimize database queries, resolve memory leaks, configure clustering, and adjust event loop settings to maximize execution speed.</p>
 </div>
 <div class="adoption-card">
-<svg class="service-card__icon" data-alt="Model Monitoring and Retraining " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="service-card__icon" data-alt="Model Monitoring and Retraining " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <circle cx="12" cy="12" r="10"></circle>
 <path d="m4.93 4.93 4.24 4.24"></path>
 <path d="m14.83 9.17 4.24-4.24"></path>
@@ -761,7 +785,7 @@ td.mob-top-0 {padding-top:0px !important;}
 <!-- Case Study Single Banner Img -->
 <!-- Case Study After -->
 <!-- Industry-Specific -->
-<section class="industry-solutions-section section_block wow fadeInUp" data-color-class="light" data-wpr-lazyrender="1">
+<section class="industry-solutions-section section_block wow fadeInUp" data-color-class="light">
 <div class="container">
 <div class="ai-header">
 <div>
@@ -771,7 +795,7 @@ td.mob-top-0 {padding-top:0px !important;}
 </div>
 <div class="industry-solutions-grid">
 <div class="industry-card">
-<svg class="industry-card__icon" data-alt="Retail and Ecommerce " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="industry-card__icon" data-alt="Retail and Ecommerce " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <circle cx="8" cy="21" r="1"></circle>
 <circle cx="19" cy="21" r="1"></circle>
 <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
@@ -780,22 +804,22 @@ td.mob-top-0 {padding-top:0px !important;}
 <p>We build high-concurrency Node.js backends and headless ecommerce gateways to handle traffic spikes during peak sales events like Black Friday.</p>
 </div>
 <div class="industry-card">
-<svg class="industry-card__icon" data-alt="Healthcare " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="industry-card__icon" data-alt="Healthcare " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
 </svg><noscript><img alt="Healthcare " height="55" src="assets/images/icons/predictive-analytics-icons-16.svg" width="47"/></noscript>
 <h3>Healthcare &amp; Life Sciences</h3>
 <p>We develop secure, audit-ready Node.js APIs with data encryption and secure database connectors that comply with medical privacy standards.</p>
 </div>
 <div class="industry-card">
-<svg class="industry-card__icon" data-alt="Financial Services " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<rect rx="2" x="2" y="5"></rect>
+<svg class="industry-card__icon" data-alt="Financial Services " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect height="14" rx="2" width="20" x="2" y="5"></rect>
 <line x1="2" x2="22" y1="10" y2="10"></line>
 </svg><noscript><img alt="Financial Services " height="57" src="assets/images/icons/predictive-analytics-icons-6.svg" width="60"/></noscript>
 <h3>Financial Services</h3>
 <p>We build fast, secure transaction processing services, real-time ledger synchronization, and robust database layers using Node.js.</p>
 </div>
 <div class="industry-card">
-<svg class="industry-card__icon" data-alt="Predictive Analytics Marketing " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="industry-card__icon" data-alt="Predictive Analytics Marketing " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path>
 <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path>
 <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path>
@@ -804,7 +828,7 @@ td.mob-top-0 {padding-top:0px !important;}
 <p>We design scalable, microservices-based Node.js backend architectures and APIs that allow SaaS platforms to scale compute dynamically.</p>
 </div>
 <div class="industry-card">
-<svg class="industry-card__icon" data-alt="Predictive HR Analytics " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="industry-card__icon" data-alt="Predictive HR Analytics " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
 <path d="M15 18H9"></path>
 <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
@@ -815,7 +839,7 @@ td.mob-top-0 {padding-top:0px !important;}
 <p>We build real-time inventory tracking, delivery dispatching engines, and GPS tracking servers using Node.js and WebSockets.</p>
 </div>
 <div class="industry-card">
-<svg class="industry-card__icon" data-alt="Manufacturing and Supply Chain " fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<svg class="industry-card__icon" data-alt="Manufacturing and Supply Chain " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"></path>
 <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
 </svg><noscript><img alt="Manufacturing and Supply Chain " height="59" src="assets/images/icons/predictive-analytics-icons-18.svg" width="60"/></noscript>
@@ -826,7 +850,7 @@ td.mob-top-0 {padding-top:0px !important;}
 </div>
 </section>
 <!-- Industry-Specific -->
-<div class="wow fadeInUp" data-wpr-lazyrender="1">
+<div class="wow fadeInUp">
 <!-- solution offered -->
 <section class="case-study-solution wow fadeInUp" data-color-class="light">
 <div class="container wow fadeInUp">
@@ -842,7 +866,7 @@ td.mob-top-0 {padding-top:0px !important;}
 <div class="solution-right-space"></div>
 <div class="solution-item">
 <div class="solution-icon">
-<svg class="why-choose__icon" data-alt="Business Outcome Focus " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="why-choose__icon" data-alt="Business Outcome Focus " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
 </svg><noscript><img alt="High-Performance Event Loop " class="solution-icon" height="42" src="assets/images/icons/predictive-analytics-icons-9.svg" width="42"/></noscript>
 </div>
@@ -853,7 +877,7 @@ td.mob-top-0 {padding-top:0px !important;}
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<svg class="why-choose__icon" data-alt="Domain-Specific Model Training " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="why-choose__icon" data-alt="Domain-Specific Model Training " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="m16 18 6-6-6-6"></path>
 <path d="m8 6-6 6 6 6"></path>
 </svg><noscript><img alt="Unified Full-Stack Codebase " class="solution-icon" height="54" src="assets/images/icons/predictive-analytics-icons-7.svg" width="54"/></noscript>
@@ -865,7 +889,7 @@ td.mob-top-0 {padding-top:0px !important;}
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<svg class="why-choose__icon" data-alt="End-to-End Delivery " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="why-choose__icon" data-alt="End-to-End Delivery " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path>
 <path d="M12 22V12"></path>
 <polyline points="3.29 7 12 12 20.71 7"></polyline>
@@ -879,7 +903,7 @@ td.mob-top-0 {padding-top:0px !important;}
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<svg class="why-choose__icon" data-alt="Ecommerce and Retail Specialisation " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="why-choose__icon" data-alt="Ecommerce and Retail Specialisation " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M16 10a4 4 0 0 1-8 0"></path>
 <path d="M3.103 6.034h17.794"></path>
 <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path>
@@ -892,8 +916,8 @@ td.mob-top-0 {padding-top:0px !important;}
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<svg class="why-choose__icon" data-alt="Transparent Model Governance " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<rect rx="1" x="2" y="3"></rect>
+<svg class="why-choose__icon" data-alt="Transparent Model Governance " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect height="5" rx="1" width="20" x="2" y="3"></rect>
 <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"></path>
 <path d="M10 12h4"></path>
 </svg><noscript><img alt="Rich Package Ecosystem " class="solution-icon" height="56" src="assets/images/icons/predictive-analytics-icons-20.svg" width="56"/></noscript>
@@ -905,7 +929,7 @@ td.mob-top-0 {padding-top:0px !important;}
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<svg class="why-choose__icon" data-alt="Ongoing Optimization Support " fill="none" stroke="currentColor" stroke-="" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="why-choose__icon" data-alt="Ongoing Optimization Support " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="m12 14 4-4"></path>
 <path d="M3.34 19a10 10 0 1 1 17.32 0"></path>
 </svg><noscript><img alt="Node.js Performance Tuning " class="solution-icon" height="51" src="assets/images/icons/predictive-analytics-icons-1.svg" width="54"/></noscript>
@@ -921,10 +945,10 @@ td.mob-top-0 {padding-top:0px !important;}
 </section>
 </div>
 <!-- Our Work and Process -->
-<div class="vibe-code-case-study wow fadeInUp" data-wpr-lazyrender="1">
+<div class="vibe-code-case-study wow fadeInUp">
 </div>
 <!-- Real Results. Real Impact -->
-<section class="case-study-workflow wow fadeInUp" data-color-class="light" data-wpr-lazyrender="1">
+<section class="case-study-workflow wow fadeInUp" data-color-class="light">
 <div class="container">
 <div class="case-study-header">
 <div class="header-content">
@@ -1098,7 +1122,7 @@ td.mob-top-0 {padding-top:0px !important;}
 <!-- Industry-Specific -->
 <!-- Why Choose CP section intentionally disabled -->
 <!-- planet commitment -->
-<section class="section_block transformative_section wow fadeInUp" data-color-class="light" data-wpr-lazyrender="1">
+<section class="section_block transformative_section wow fadeInUp" data-color-class="light">
 <div class="container">
 <div class="section_title">
 <h2>Our Node.js Application Development Process</h2>
@@ -1164,7 +1188,7 @@ td.mob-top-0 {padding-top:0px !important;}
 </div>
 </div>
 </section>
-<div class="wow fadeInUp" data-wpr-lazyrender="1">
+<div class="wow fadeInUp">
 <!-- accordian -->
 <section class="tech-stack">
 <div class="container">
@@ -1213,7 +1237,7 @@ td.mob-top-0 {padding-top:0px !important;}
 </section>
 </div>
 <!-- Section 12: Testimonials -->
-<section class="client-testimonials-section" data-wpr-lazyrender="1" style="display: none;">
+<section class="client-testimonials-section" style="display: none;">
 <div class="container">
 <div class="blog-insights-head">
 <div class="blog-heading-copy">
@@ -1469,12 +1493,12 @@ td.mob-top-0 {padding-top:0px !important;}
 </section>
 <!-- Impact -->
 <!--Reach new testimonials-->
-<div class="wow fadeInUp" data-wpr-lazyrender="1">
+<div class="wow fadeInUp">
 </div>
 <!--Reach new testimonials ends-->
 <!-- Case Study Conclusion-->
 <!-- Future que and ans -->
-<div class="container services_faqs" data-color-class="light" data-wpr-lazyrender="1">
+<div class="container services_faqs" data-color-class="light">
 <div class="services-faq faq-section">
 <!--Faq section-->
 <section class="faq-section">
@@ -1594,7 +1618,7 @@ td.mob-top-0 {padding-top:0px !important;}
 <!-- Site Footer Start Here -->
 
 <!-- ================= Footer ================= -->
-<footer class="page-footer-wrapper" data-color-class="light" data-wpr-lazyrender="1" style="background: #111; padding: 20px; text-align: center; color: #777;"><div class_="container"><p>Copyright © 2026 Rjcommerce. All rights reserved.</p></div></footer>
+<footer class="page-footer-wrapper" data-color-class="light" style="background: #111; padding: 20px; text-align: center; color: #777;"><div class_="container"><p>Copyright © 2026 Rjcommerce. All rights reserved.</p></div></footer>
 <!-- ================= End Footer ================= -->
 <div class="scrollup"></div>
 </div>
