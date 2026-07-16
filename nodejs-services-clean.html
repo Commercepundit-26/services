@@ -346,26 +346,25 @@ td.mob-top-0 {padding-top:0px !important;}
         /* Fallback brand grid layout when JS slider is disabled */
         ul.brand-logos-new {
             display: flex !important;
-            flex-wrap: wrap !important;
-            justify-content: center !important;
+            flex-wrap: nowrap !important;
+            justify-content: flex-start !important;
             align-items: center !important;
             gap: 40px 50px !important;
             list-style: none !important;
             padding: 0 !important;
             margin: 40px auto !important;
-            max-width: 1200px !important;
+            width: max-content !important;
         }
         ul.brand-logos-new li.brand-logo-new {
             display: flex !important;
             justify-content: center !important;
             align-items: center !important;
-            width: calc(16.66% - 42px) !important;
-            min-width: 110px !important;
-            max-width: 150px !important;
+            width: 150px !important;
             height: 80px !important;
             margin: 0 !important;
             padding: 0 !important;
             list-style-type: none !important;
+            flex-shrink: 0 !important;
         }
         ul.brand-logos-new li.brand-logo-new:before {
             display: none !important; /* Hide list bullets */
@@ -445,6 +444,13 @@ td.mob-top-0 {padding-top:0px !important;}
             border-radius: 12px !important;
             z-index: 10 !important;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+        }
+        .stats-grid .stat-box {
+            list-style: none !important;
+            list-style-type: none !important;
+        }
+        .stats-grid .stat-box:before {
+            display: none !important;
         }
         .stat-box {
             text-align: center !important;
@@ -552,153 +558,9 @@ td.mob-top-0 {padding-top:0px !important;}
 <div class="container">
 <div class="brand-logo-wrap">
 <div class="brand-wrapper leftscrolling" id="left-scroll">
-<ul class="brand-logos-new">
-<li class="brand-logo-new">
-<img alt="AT&amp;T" height="57" src="assets/images/icons/ATT.svg" width="138"/><noscript><img alt="AT&amp;T" height="57" src="assets/images/icons/ATT.svg" width="138"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="CASIO" height="28" src="assets/images/icons/casio.svg" width="146"/><noscript><img alt="CASIO" height="28" src="assets/images/icons/casio.svg" width="146"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="BannerBuzz" height="60" src="assets/images/icons/Vector-33.svg" width="223"/><noscript><img alt="BannerBuzz" height="60" src="assets/images/icons/Vector-33.svg" width="223"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Enagic" height="59" src="assets/images/icons/enagic_logo-1-1.svg" width="193"/><noscript><img alt="Enagic" height="59" src="assets/images/icons/enagic_logo-1-1.svg" width="193"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Covers &amp; all" height="39" src="assets/images/icons/thumbnail_logo_feedback2x.1738589672-1.svg" width="203"/><noscript><img alt="Covers &amp; all" height="39" src="assets/images/icons/thumbnail_logo_feedback2x.1738589672-1.svg" width="203"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="CB Station" height="59" src="assets/images/icons/cbstation-logo-1-1.svg" width="224"/><noscript><img alt="CB Station" height="59" src="assets/images/icons/cbstation-logo-1-1.svg" width="224"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Made To Promo" height="43" src="assets/images/icons/mtp-logo-1-1.svg" width="149"/><noscript><img alt="Made To Promo" height="43" src="assets/images/icons/mtp-logo-1-1.svg" width="149"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Tarps &amp; All" height="33" src="assets/images/icons/traps.svg" width="220"/><noscript><img alt="Tarps &amp; All" height="33" src="assets/images/icons/traps.svg" width="220"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Thermal" height="66" src="assets/images/icons/thermal-club.svg" width="102"/><noscript><img alt="Thermal" height="66" src="assets/images/icons/thermal-club.svg" width="102"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="4Seating" height="56" src="assets/images/icons/logo-new-1.svg" width="202"/><noscript><img alt="4Seating" height="56" src="assets/images/icons/logo-new-1.svg" width="202"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Lily Ann Cabinets" height="39" src="assets/images/icons/LilyAnnCabinets-1-1.svg" width="219"/><noscript><img alt="Lily Ann Cabinets" height="39" src="assets/images/icons/LilyAnnCabinets-1-1.svg" width="219"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Container Exchanger " height="58" src="assets/images/icons/containerexchanger-1-1.svg" width="221"/><noscript><img alt="Container Exchanger " height="58" src="assets/images/icons/containerexchanger-1-1.svg" width="221"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Simpl" height="59" src="assets/images/icons/Simpllot-1.svg" width="186"/><noscript><img alt="Simpl" height="59" src="assets/images/icons/Simpllot-1.svg" width="186"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Coleman's" height="73" src="assets/images/icons/colemans_logo-1.svg" width="188"/><noscript><img alt="Coleman's" height="73" src="assets/images/icons/colemans_logo-1.svg" width="188"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Maxtrac Suspension" height="62" src="assets/images/icons/maxtracsuspension-1.svg" width="217"/><noscript><img alt="Maxtrac Suspension" height="62" src="assets/images/icons/maxtracsuspension-1.svg" width="217"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="La Nail Supplies" height="60" src="assets/images/icons/la-nails-logo-new-300x60-1.png" width="300"/><noscript><img alt="La Nail Supplies" height="60" src="assets/images/icons/la-nails-logo-new-300x60-1.png" width="300"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Bigcity Sportswear" height="105" src="assets/images/icons/images-9-1.svg" width="139"/><noscript><img alt="Bigcity Sportswear" height="105" src="assets/images/icons/images-9-1.svg" width="139"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Pirate Mx Powersports " height="68" src="assets/images/icons/piratemx-1.svg" width="213"/><noscript><img alt="Pirate Mx Powersports " height="68" src="assets/images/icons/piratemx-1.svg" width="213"/></noscript>
-<span class="logo-title"></span>
-</li>
-</ul>
+<ul class="brand-logos-new"><li class_="brand-logo-new"><img alt="Casio" height="77" src="assets/images/icons/casio.svg" width="140"/><span class_="logo-title"></span></li><li class_="brand-logo-new"><img alt="CB Station" height="77" src="assets/images/icons/cbstation-logo-1-1.svg" width="140"/><span class_="logo-title"></span></li><li class_="brand-logo-new"><img alt="Enagic" height="77" src="assets/images/icons/enagic_logo-1-1.svg" width="140"/><span class_="logo-title"></span></li><li class_="brand-logo-new"><img alt="Abletec" height="77" src="assets/images/icons/abletec-logo-1.svg" width="140"/><span class_="logo-title"></span></li><li class_="brand-logo-new"><img alt="Colemans" height="77" src="assets/images/icons/colemans_logo-1.svg" width="140"/><span class_="logo-title"></span></li><li class_="brand-logo-new"><img alt="Really Cheap Floors" height="77" src="assets/images/icons/reallycheapfloors-logo-1.svg" width="140"/><span class_="logo-title"></span></li></ul>
 </div>
-<div class="brand-wrapper rightscrolling" id="left-scroll">
-<ul class="brand-logos-new">
-<li class="brand-logo-new">
-<img alt="Rockabilia" height="46" src="assets/images/icons/client-company-logo-6.svg" width="230"/><noscript><img alt="Rockabilia" height="46" src="assets/images/icons/client-company-logo-6.svg" width="230"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Abletech" height="58" src="assets/images/icons/abletec-logo-1.svg" width="175"/><noscript><img alt="Abletech" height="58" src="assets/images/icons/abletec-logo-1.svg" width="175"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Plantatorem" height="32" src="assets/images/icons/plantatorem-logo-2-1.svg" width="193"/><noscript><img alt="Plantatorem" height="32" src="assets/images/icons/plantatorem-logo-2-1.svg" width="193"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="ReallyCheapFloor" height="76" src="assets/images/icons/reallycheapfloors-logo-1.svg" width="242"/><noscript><img alt="ReallyCheapFloor" height="76" src="assets/images/icons/reallycheapfloors-logo-1.svg" width="242"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Sing Shark" height="59" src="assets/images/icons/signshark-2.svg" width="230"/><noscript><img alt="Sing Shark" height="59" src="assets/images/icons/signshark-2.svg" width="230"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Sugar Auto Parts" height="62" src="assets/images/icons/SugarAutoParts-1.svg" width="178"/><noscript><img alt="Sugar Auto Parts" height="62" src="assets/images/icons/SugarAutoParts-1.svg" width="178"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Canvas Champ" height="38" src="assets/images/icons/CanvasChamp.svg" width="247"/><noscript><img alt="Canvas Champ" height="38" src="assets/images/icons/CanvasChamp.svg" width="247"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Pixies Gardens" height="81" src="assets/images/icons/Pixiesgarden-1.svg" width="193"/><noscript><img alt="Pixies Gardens" height="81" src="assets/images/icons/Pixiesgarden-1.svg" width="193"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Mobile Light Box" height="77" src="assets/images/icons/mobile-light-box-1-1.svg" width="140"/><noscript><img alt="Mobile Light Box" height="77" src="assets/images/icons/mobile-light-box-1-1.svg" width="140"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Beyond Creations" height="74" src="assets/images/icons/beyomd-creation-1.svg" width="204"/><noscript><img alt="Beyond Creations" height="74" src="assets/images/icons/beyomd-creation-1.svg" width="204"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="SDI" height="57" src="assets/images/icons/sdi-1.svg" width="182"/><noscript><img alt="SDI" height="57" src="assets/images/icons/sdi-1.svg" width="182"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="OREI" height="47" src="assets/images/icons/orei-logo-1-1.svg" width="147"/><noscript><img alt="OREI" height="47" src="assets/images/icons/orei-logo-1-1.svg" width="147"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="RSP" height="66" src="assets/images/icons/image-45.svg" width="139"/><noscript><img alt="RSP" height="66" src="assets/images/icons/image-45.svg" width="139"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="ivotemyvote" height="34" src="assets/images/icons/Ivotemyvote-1-1.svg" width="230"/><noscript><img alt="ivotemyvote" height="34" src="assets/images/icons/Ivotemyvote-1-1.svg" width="230"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Boca Bargoons" height="69" src="assets/images/icons/header-bocca-bargoon-1-1.svg" width="171"/><noscript><img alt="Boca Bargoons" height="69" src="assets/images/icons/header-bocca-bargoon-1-1.svg" width="171"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Alrama Films" height="40" src="assets/images/icons/alarama.svg" width="244"/><noscript><img alt="Alrama Films" height="40" src="assets/images/icons/alarama.svg" width="244"/></noscript>
-<span class="logo-title"></span>
-</li>
-<li class="brand-logo-new">
-<img alt="Chemex" height="62" src="assets/images/icons/chemex.svg" width="216"/><noscript><img alt="Chemex" height="62" src="assets/images/icons/chemex.svg" width="216"/></noscript>
-<span class="logo-title"></span>
-</li>
-</ul>
-</div>
+
 </div>
 </div>
 </div>
@@ -796,7 +658,7 @@ td.mob-top-0 {padding-top:0px !important;}
 <div class="adoption-card">
 <img alt="Node.js Development Software Integration " height="55" src="assets/cloned-theme/icons-semantic/productivity.svg" width="62"/><noscript><img alt="Node.js Development Software Integration " height="55" src="assets/cloned-theme/icons-semantic/productivity.svg" width="62"/></noscript>
 <h3>Node.js Performance Tuning</h3>
-<p>We identify memory leaks, optimize slow database queries, configure clustering, and maximize network throughput for production applications.</p>
+<p>We audit your Node.js apps, optimize database queries, resolve memory leaks, configure clustering, and adjust event loop settings to maximize execution speed.</p>
 </div>
 <div class="adoption-card">
 <img alt="Model Monitoring and Retraining " height="36" src="assets/cloned-theme/icons-semantic/customer-support-ticket.svg" width="32"/><noscript><img alt="Model Monitoring and Retraining " height="36" src="assets/cloned-theme/icons-semantic/customer-support-ticket.svg" width="32"/></noscript>
