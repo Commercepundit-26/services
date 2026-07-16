@@ -408,19 +408,16 @@ td.mob-top-0 {padding-top:0px !important;}
             .hero-img {
                 position: absolute !important;
                 right: 0 !important;
-                top: 50% !important;
-                transform: translateY(-50%) !important;
-                width: 50% !important;
-                height: 60% !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
+                top: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                z-index: 1 !important;
                 overflow: hidden !important;
             }
             .hero-img img.desktop-img {
                 width: 100% !important;
                 height: 100% !important;
-                object-fit: contain !important;
+                object-fit: cover !important;
                 object-position: right center !important;
             }
             .hero-img::after {
@@ -459,7 +456,7 @@ td.mob-top-0 {padding-top:0px !important;}
                 display: block !important;
                 width: 100% !important;
                 height: 100% !important;
-                object-fit: contain !important;
+                object-fit: cover !important;
                 object-position: center center !important;
             }
             .overlay {
@@ -756,7 +753,11 @@ Node.js Development Services for Applications Built to Scale</h1>
 </div>
 <div class="ai-adoption-grid">
 <div class="adoption-card">
-<img alt="Node.js Development Consulting " height="51" src="assets/images/icons/predictive-analytics-icons-10.svg" width="51"/><noscript><img alt="Node.js Development Consulting " height="51" src="assets/images/icons/predictive-analytics-icons-10.svg" width="51"/></noscript>
+<svg class="service-card__icon" data-alt="Predictive Analytics Consulting " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 6a9 9 0 0 0-9 9V3"></path>
+<circle cx="18" cy="6" r="3"></circle>
+<circle cx="6" cy="18" r="3"></circle>
+</svg><noscript><img alt="Node.js Development Consulting " height="51" src="assets/images/icons/predictive-analytics-icons-10.svg" width="51"/></noscript>
 <h3>Node.js Consulting and Architecture</h3>
 <p>The most expensive Node.js problems are architectural ones discovered six months into a build. We review your product requirements, evaluate your existing stack, and design a Node.js architecture that handles your current load and scales cleanly as user volume grows. You receive a technical blueprint your team can build on with confidence, not assumptions.</p>
 </div>
@@ -766,17 +767,13 @@ Node.js Development Services for Applications Built to Scale</h1>
 <p>Generic frameworks produce generic limitations. Our custom Node.js development services are built around your specific product requirements, data models, and performance targets. Whether you need a complex API layer, a real-time processing pipeline, or a multi-tenant SaaS backend, the solution is engineered for your use case from the ground up.</p>
 </div>
 <div class="adoption-card">
-<svg class="service-card__icon" data-alt="Predictive Analytics Marketing " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2"></path>
-<path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06"></path>
-<path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8"></path>
-</svg><noscript><img alt="Node.js Development Marketing " height="59" src="assets/images/icons/predictive-analytics-icons-12.svg" width="60"/></noscript>
+<img alt="Node.js Development Marketing " height="59" src="assets/images/icons/predictive-analytics-icons-12.svg" width="60"/><noscript><img alt="Node.js Development Marketing " height="59" src="assets/images/icons/predictive-analytics-icons-12.svg" width="60"/></noscript>
 <h3>Node.js API Development and Integration</h3>
 <p>APIs are the connective tissue of modern applications. We build RESTful and GraphQL APIs on Node.js that are fast, well-documented, and built to integrate cleanly with your frontend, mobile applications, and third-party services. Every API we deliver includes authentication, rate limiting, error handling, and versioning built into the initial architecture.</p>
 </div>
 <div class="adoption-card">
 <svg class="service-card__icon" data-alt="Retail Predictive Analytics " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+<path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
 </svg><noscript><img alt="Retail Node.js Development " height="60" src="assets/images/icons/openAI-ads-services-icon25.svg" width="59"/></noscript>
 <h3>Real-Time Application Development</h3>
 <p>Chat systems, live dashboards, collaborative tools, and streaming applications all require server infrastructure that handles simultaneous connections without degradation. Node.js with WebSocket and Socket.io is the right foundation for these use cases. We build real-time applications that perform consistently at scale, not just under controlled test conditions.</p>
