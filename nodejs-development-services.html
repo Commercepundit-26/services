@@ -603,6 +603,41 @@ td.mob-top-0 {padding-top:0px !important;}
             margin-left: auto !important;
             margin-right: auto !important;
         }
+        
+        /* Align section images to stretch to the exact height of their text columns */
+        @media screen and (min-width: 768px) {
+            .google-ads-content {
+                display: flex !important;
+                align-items: stretch !important;
+            }
+            .google-ads-content .ads-image {
+                display: flex !important;
+                height: auto !important;
+                margin: 0 !important;
+            }
+            .google-ads-content .ads-image img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                border-radius: 12px !important;
+            }
+            
+            .solutions-section {
+                display: flex !important;
+                align-items: stretch !important;
+            }
+            .solutions-section .image-column {
+                display: flex !important;
+                height: auto !important;
+                margin: 0 !important;
+            }
+            .solutions-section .image-column img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                border-radius: 12px !important;
+            }
+        }
     </style>
 </head>
 <body class="wp-singular page-template page-template-templates page-template-vibe-coding page-template-templatesvibe-coding-php page page-id-19533 wp-custom-logo wp-theme-rjcommerce ai-solution-for-ecommerce services-testimonial-homedesign predictive-analytics-services group-blog">
@@ -895,7 +930,9 @@ Node.js Development Services for Applications Built to Scale</h1>
 <div class="solution-item">
 <div class="solution-icon">
 <svg class="why-choose__icon" data-alt="Business Outcome Focus " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+<path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path>
+<path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path>
+<path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path>
 </svg><noscript><img alt="High-Performance Event Loop " class="solution-icon" height="42" src="assets/images/icons/predictive-analytics-icons-9.svg" width="42"/></noscript>
 </div>
 <div>
@@ -905,10 +942,7 @@ Node.js Development Services for Applications Built to Scale</h1>
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<svg class="why-choose__icon" data-alt="Domain-Specific Model Training " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="m16 18 6-6-6-6"></path>
-<path d="m8 6-6 6 6 6"></path>
-</svg><noscript><img alt="Unified Full-Stack Codebase " class="solution-icon" height="54" src="assets/images/icons/predictive-analytics-icons-7.svg" width="54"/></noscript>
+<img alt="Unified Full-Stack Codebase " class="solution-icon" height="54" src="assets/images/icons/predictive-analytics-icons-7.svg" width="54"/><noscript><img alt="Unified Full-Stack Codebase " class="solution-icon" height="54" src="assets/images/icons/predictive-analytics-icons-7.svg" width="54"/></noscript>
 </div>
 <div>
 <h3 class="solution-title">Full-Stack JavaScript Capability</h3>
@@ -918,10 +952,8 @@ Node.js Development Services for Applications Built to Scale</h1>
 <div class="solution-item">
 <div class="solution-icon">
 <svg class="why-choose__icon" data-alt="End-to-End Delivery " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path>
-<path d="M12 22V12"></path>
-<polyline points="3.29 7 12 12 20.71 7"></polyline>
-<path d="m7.5 4.27 9 5.15"></path>
+<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+<path d="m9 12 2 2 4-4"></path>
 </svg><noscript><img alt="Microservices and Serverless " class="solution-icon" height="51" src="assets/images/icons/predictive-analytics-icons-19.svg" width="54"/></noscript>
 </div>
 <div>
@@ -931,11 +963,7 @@ Node.js Development Services for Applications Built to Scale</h1>
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<svg class="why-choose__icon" data-alt="Ecommerce and Retail Specialisation " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M16 10a4 4 0 0 1-8 0"></path>
-<path d="M3.103 6.034h17.794"></path>
-<path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path>
-</svg><noscript><img alt="Headless Ecommerce Integration " class="solution-icon" height="54" src="assets/images/icons/predictive-analytics-icons-3.svg" width="54"/></noscript>
+<img alt="Headless Ecommerce Integration " class="solution-icon" height="54" src="assets/images/icons/predictive-analytics-icons-3.svg" width="54"/><noscript><img alt="Headless Ecommerce Integration " class="solution-icon" height="54" src="assets/images/icons/predictive-analytics-icons-3.svg" width="54"/></noscript>
 </div>
 <div>
 <h3 class="solution-title">Flexible Engagement Models</h3>
@@ -945,9 +973,8 @@ Node.js Development Services for Applications Built to Scale</h1>
 <div class="solution-item">
 <div class="solution-icon">
 <svg class="why-choose__icon" data-alt="Transparent Model Governance " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<rect height="5" rx="1" width="20" x="2" y="3"></rect>
-<path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"></path>
-<path d="M10 12h4"></path>
+<rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect>
+<path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
 </svg><noscript><img alt="Rich Package Ecosystem " class="solution-icon" height="56" src="assets/images/icons/predictive-analytics-icons-20.svg" width="56"/></noscript>
 </div>
 <div>
@@ -957,10 +984,7 @@ Node.js Development Services for Applications Built to Scale</h1>
 </div>
 <div class="solution-item">
 <div class="solution-icon">
-<svg class="why-choose__icon" data-alt="Ongoing Optimization Support " fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="m12 14 4-4"></path>
-<path d="M3.34 19a10 10 0 1 1 17.32 0"></path>
-</svg><noscript><img alt="Node.js Performance Tuning " class="solution-icon" height="51" src="assets/images/icons/predictive-analytics-icons-1.svg" width="54"/></noscript>
+<img alt="Node.js Performance Tuning " class="solution-icon" height="51" src="assets/images/icons/predictive-analytics-icons-1.svg" width="54"/><noscript><img alt="Node.js Performance Tuning " class="solution-icon" height="51" src="assets/images/icons/predictive-analytics-icons-1.svg" width="54"/></noscript>
 </div>
 <div>
 <h3 class="solution-title">Long-Term Technical Partnership</h3>
@@ -1232,43 +1256,9 @@ $180K</p>
 <div class="tech-stack__inner">
 <div class="tech-stack__intro">
 <h2 class="tech-stack__title">Technology Stack Used in Our Node.js Development Services</h2>
-<p class="tech-stack__desc">Frameworks, Cloud Platforms, and Visualisation Tools with Established Logos and Widespread Recognition </p>
+<p class="tech-stack__desc">Selected for Performance, Ecosystem Maturity, and Long-Term Maintainability</p>
 </div>
-<div class="accordion-vibe">
-<div class="acc-item active"><span class="acc-title">Compute</span><span aria-hidden="true" class="acc-toggle"></span></div>
-<div class="acc-content" style="height:auto;"><div class="acc-content-inner"><div class="logo-grid">
-<img alt="AWS" class="logo-grid__img" height="60" src="assets/images/icons/logo-aws.svg" width="200"/>
-<img alt="Amazon EC2 &amp; ECS" class="logo-grid__img" height="60" src="assets/images/icons/logo-ec2.svg" width="200"/>
-<img alt="Docker" class="logo-grid__img" height="60" src="assets/images/icons/logo-docker.svg" width="200"/>
-<img alt="Kubernetes" class="logo-grid__img" height="60" src="assets/images/icons/logo-kubernetes.svg" width="200"/>
-</div></div></div>
-<div class="acc-item"><span class="acc-title">Storage and CDN</span><span aria-hidden="true" class="acc-toggle"></span></div>
-<div class="acc-content" style="height:0px;"><div class="acc-content-inner"><div class="logo-grid">
-<img alt="AWS Storage" class="logo-grid__img" height="60" src="assets/images/icons/logo-aws.svg" width="200"/>
-<img alt="Amazon CloudFront" class="logo-grid__img" height="60" src="assets/images/icons/logo-cloudfront.svg" width="200"/>
-</div></div></div>
-<div class="acc-item"><span class="acc-title">Databases</span><span aria-hidden="true" class="acc-toggle"></span></div>
-<div class="acc-content" style="height:0px;"><div class="acc-content-inner"><div class="logo-grid">
-<img alt="PostgreSQL" class="logo-grid__img" height="60" src="assets/images/icons/logo-postgresql.svg" width="200"/>
-<img alt="MySQL" class="logo-grid__img" height="60" src="assets/images/icons/logo-mysql.svg" width="200"/>
-<img alt="Redis Cache" class="logo-grid__img" height="60" src="assets/images/icons/logo-redis.svg" width="200"/>
-<img alt="MongoDB" class="logo-grid__img" height="60" src="assets/images/icons/logo-mongodb.svg" width="200"/>
-</div></div></div>
-<div class="acc-item"><span class="acc-title">DevOps &amp; CI/CD</span><span aria-hidden="true" class="acc-toggle"></span></div>
-<div class="acc-content" style="height:0px;"><div class="acc-content-inner"><div class="logo-grid">
-<img alt="Jenkins CI/CD" class="logo-grid__img" height="60" src="assets/images/icons/logo-jenkins.svg" width="200"/>
-<img alt="GitHub" class="logo-grid__img" height="60" src="assets/images/icons/logo-github.svg" width="200"/>
-<img alt="Git" class="logo-grid__img" height="60" src="assets/images/icons/logo-git.svg" width="200"/>
-<img alt="Docker" class="logo-grid__img" height="60" src="assets/images/icons/logo-docker.svg" width="200"/>
-</div></div></div>
-<div class="acc-item"><span class="acc-title">Frameworks &amp; Languages</span><span aria-hidden="true" class="acc-toggle"></span></div>
-<div class="acc-content" style="height:0px;"><div class="acc-content-inner"><div class="logo-grid">
-<img alt="Node.js" class="logo-grid__img" height="60" src="assets/images/icons/logo-nodejs.svg" width="200"/>
-<img alt="Python" class="logo-grid__img" height="60" src="assets/images/icons/logo-python.svg" width="200"/>
-<img alt="PHP" class="logo-grid__img" height="60" src="assets/images/icons/logo-php.svg" width="200"/>
-<img alt="Java" class="logo-grid__img" height="60" src="assets/images/icons/logo-java.svg" width="200"/>
-</div></div></div>
-</div>
+<div class="accordion-vibe"><div class_="acc-item active"><span class_="acc-title">Runtime and Frameworks</span><span aria-hidden="true" class_="acc-toggle"></span></div><div class_="acc-content" style="height:auto;"><div class_="acc-content-inner"><div class_="logo-grid"><img alt="Node.js" class_="logo-grid__img" height="60" src="assets/images/icons/logo-nodejs.svg" width="200"/><img alt="Express.js" class_="logo-grid__img" height="60" src="assets/images/icons/logo-express.svg" width="200"/><img alt="NestJS" class_="logo-grid__img" height="60" src="assets/images/icons/logo-nestjs.svg" width="200"/><img alt="Fastify" class_="logo-grid__img" height="60" src="assets/images/icons/logo-nodejs.svg" width="200"/></div></div></div><div class_="acc-item"><span class_="acc-title">API and Communication</span><span aria-hidden="true" class_="acc-toggle"></span></div><div class_="acc-content" style="height:0px;"><div class_="acc-content-inner"><div class_="logo-grid"><img alt="REST" class_="logo-grid__img" height="60" src="assets/images/icons/logo-nodejs.svg" width="200"/><img alt="GraphQL" class_="logo-grid__img" height="60" src="assets/images/icons/logo-graphql.svg" width="200"/><img alt="WebSocket" class_="logo-grid__img" height="60" src="assets/images/icons/logo-socketio.svg" width="200"/><img alt="Socket.io" class_="logo-grid__img" height="60" src="assets/images/icons/logo-socketio.svg" width="200"/></div></div></div><div class_="acc-item"><span class_="acc-title">Databases</span><span aria-hidden="true" class_="acc-toggle"></span></div><div class_="acc-content" style="height:0px;"><div class_="acc-content-inner"><div class_="logo-grid"><img alt="PostgreSQL" class_="logo-grid__img" height="60" src="assets/images/icons/logo-postgresql.svg" width="200"/><img alt="MongoDB" class_="logo-grid__img" height="60" src="assets/images/icons/logo-mongodb.svg" width="200"/><img alt="MySQL" class_="logo-grid__img" height="60" src="assets/images/icons/logo-mysql.svg" width="200"/><img alt="Redis" class_="logo-grid__img" height="60" src="assets/images/icons/logo-redis.svg" width="200"/><img alt="Elasticsearch" class_="logo-grid__img" height="60" src="assets/images/icons/logo-elasticsearch.svg" width="200"/><img alt="DynamoDB" class_="logo-grid__img" height="60" src="assets/images/icons/logo-dynamodb.svg" width="200"/></div></div></div><div class_="acc-item"><span class_="acc-title">Frontend Integration</span><span aria-hidden="true" class_="acc-toggle"></span></div><div class_="acc-content" style="height:0px;"><div class_="acc-content-inner"><div class_="logo-grid"><img alt="React" class_="logo-grid__img" height="60" src="assets/images/icons/logo-react.svg" width="200"/><img alt="Next.js" class_="logo-grid__img" height="60" src="assets/images/icons/logo-nextjs.svg" width="200"/><img alt="Vue.js" class_="logo-grid__img" height="60" src="assets/images/icons/logo-vuejs.svg" width="200"/><img alt="Angular" class_="logo-grid__img" height="60" src="assets/images/icons/logo-angular.svg" width="200"/></div></div></div><div class_="acc-item"><span class_="acc-title">Cloud and Infrastructure</span><span aria-hidden="true" class_="acc-toggle"></span></div><div class_="acc-content" style="height:0px;"><div class_="acc-content-inner"><div class_="logo-grid"><img alt="AWS" class_="logo-grid__img" height="60" src="assets/images/icons/logo-aws.svg" width="200"/><img alt="Google Cloud" class_="logo-grid__img" height="60" src="assets/images/icons/logo-gcp.svg" width="200"/><img alt="Microsoft Azure" class_="logo-grid__img" height="60" src="assets/images/icons/logo-azure.svg" width="200"/><img alt="Docker" class_="logo-grid__img" height="60" src="assets/images/icons/logo-docker.svg" width="200"/><img alt="Kubernetes" class_="logo-grid__img" height="60" src="assets/images/icons/logo-kubernetes.svg" width="200"/><img alt="Nginx" class_="logo-grid__img" height="60" src="assets/images/icons/logo-nginx.svg" width="200"/></div></div></div><div class_="acc-item"><span class_="acc-title">DevOps and CI/CD</span><span aria-hidden="true" class_="acc-toggle"></span></div><div class_="acc-content" style="height:0px;"><div class_="acc-content-inner"><div class_="logo-grid"><img alt="GitHub Actions" class_="logo-grid__img" height="60" src="assets/images/icons/logo-github-actions.svg" width="200"/><img alt="Jenkins" class_="logo-grid__img" height="60" src="assets/images/icons/logo-jenkins.svg" width="200"/><img alt="Terraform" class_="logo-grid__img" height="60" src="assets/images/icons/logo-terraform.svg" width="200"/></div></div></div><div class_="acc-item"><span class_="acc-title">Testing and Monitoring</span><span aria-hidden="true" class_="acc-toggle"></span></div><div class_="acc-content" style="height:0px;"><div class_="acc-content-inner"><div class_="logo-grid"><img alt="Mocha" class_="logo-grid__img" height="60" src="assets/images/icons/logo-mocha.svg" width="200"/><img alt="New Relic" class_="logo-grid__img" height="60" src="assets/images/icons/logo-newrelic.svg" width="200"/><img alt="Datadog" class_="logo-grid__img" height="60" src="assets/images/icons/logo-datadog.svg" width="200"/></div></div></div></div>
 </div>
 </div>
 </section>

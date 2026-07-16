@@ -602,6 +602,41 @@ td.mob-top-0 {padding-top:0px !important;}
             margin-left: auto !important;
             margin-right: auto !important;
         }
+        
+        /* Align section images to stretch to the exact height of their text columns */
+        @media screen and (min-width: 768px) {
+            .google-ads-content {
+                display: flex !important;
+                align-items: stretch !important;
+            }
+            .google-ads-content .ads-image {
+                display: flex !important;
+                height: auto !important;
+                margin: 0 !important;
+            }
+            .google-ads-content .ads-image img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                border-radius: 12px !important;
+            }
+            
+            .solutions-section {
+                display: flex !important;
+                align-items: stretch !important;
+            }
+            .solutions-section .image-column {
+                display: flex !important;
+                height: auto !important;
+                margin: 0 !important;
+            }
+            .solutions-section .image-column img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                border-radius: 12px !important;
+            }
+        }
     </style>
 </head>
 <body class="wp-singular page-template page-template-templates page-template-vibe-coding page-template-templatesvibe-coding-php page page-id-19533 wp-custom-logo wp-theme-rjcommerce ai-solution-for-ecommerce services-testimonial-homedesign predictive-analytics-services group-blog">
