@@ -2120,6 +2120,155 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 </script>
+
+<!-- Floating Download Button Widget -->
+<div id="floating-download-widget" style="position: fixed; bottom: 30px; right: 30px; z-index: 999999; font-family: system-ui, -apple-system, sans-serif;">
+<button id="btn-floating-download" style="width: 60px; height: 60px; border-radius: 50%; background: #FC766A; border: none; box-shadow: 0 8px 24px rgba(252, 118, 106, 0.4); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease, box-shadow 0.3s ease; outline: none;">
+<svg fill="none" height="24" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+</button>
+<div id="download-menu" style="display: none; position: absolute; bottom: 80px; right: 0; background: #0a0f1d; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 20px; width: 260px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5); transition: all 0.3s ease;">
+<h4 style="color: #ffffff; margin: 0 0 15px 0; font-size: 16px; font-weight: 600;">Download Page Assets</h4>
+<button onclick="triggerDownload('svg')" style="width: 100%; padding: 12px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: #ffffff; font-size: 14px; font-weight: 500; text-align: left; cursor: pointer; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; transition: background 0.2s ease;">
+<svg fill="none" height="16" stroke="#FC766A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><line x1="9" x2="15" y1="9" y2="15"></line><line x1="15" x2="9" y1="9" y2="15"></line></svg>
+                    All SVG Icons
+                </button>
+<button onclick="triggerDownload('images')" style="width: 100%; padding: 12px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: #ffffff; font-size: 14px; font-weight: 500; text-align: left; cursor: pointer; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; transition: background 0.2s ease;">
+<svg fill="none" height="16" stroke="#FC766A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                    All Page Images
+                </button>
+<button onclick="triggerDownload('both')" style="width: 100%; padding: 12px; background: #FC766A; border: none; border-radius: 8px; color: #ffffff; font-size: 14px; font-weight: 600; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 10px; transition: background 0.2s ease;">
+<svg fill="none" height="16" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                    Download Both (ZIP)
+                </button>
+<div id="download-status-text" style="display: none; color: #FC766A; font-size: 12px; margin-top: 15px; text-align: center; font-weight: 500;"></div>
+</div>
+</div>
+<script>
+        function loadJSZip(callback) {
+            if (typeof JSZip !== 'undefined') {
+                callback();
+                return;
+            }
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+            script.onload = callback;
+            document.head.appendChild(script);
+        }
+
+        async function triggerDownload(type) {
+            loadJSZip(async () => {
+                const zip = new JSZip();
+                const svgs = [];
+                const images = [];
+                
+                // 1. Crawl all <img> tags
+                document.querySelectorAll('img').forEach(img => {
+                    let src = img.getAttribute('src');
+                    if (!src) return;
+                    if (src.endsWith('.svg') || src.includes('/icons/')) {
+                        svgs.push(src);
+                    } else if (src.endsWith('.webp') || src.endsWith('.png') || src.endsWith('.jpg') || src.endsWith('.jpeg')) {
+                        images.push(src);
+                    }
+                });
+                
+                // 2. Crawl inline styles for background-image
+                document.querySelectorAll('[style*="background-image"]').forEach(el => {
+                    const style = el.getAttribute('style');
+                    const match = style.match(/url\(['"]?([^'"]+)['"]?\)/);
+                    if (match && match[1]) {
+                        const src = match[1];
+                        if (src.endsWith('.svg') || src.includes('/icons/')) {
+                            svgs.push(src);
+                        } else {
+                            images.push(src);
+                        }
+                    }
+                });
+                
+                // Deduplicate arrays
+                const uniqueSvgs = [...new Set(svgs)];
+                const uniqueImages = [...new Set(images)];
+                
+                const filesToDownload = [];
+                if (type === 'svg' || type === 'both') {
+                    uniqueSvgs.forEach(path => filesToDownload.push({ path, folder: 'icons' }));
+                }
+                if (type === 'images' || type === 'both') {
+                    uniqueImages.forEach(path => filesToDownload.push({ path, folder: 'images' }));
+                }
+                
+                if (filesToDownload.length === 0) {
+                    alert('No assets found to download!');
+                    return;
+                }
+                
+                const statusText = document.getElementById('download-status-text');
+                statusText.style.display = 'block';
+                statusText.innerText = 'Downloading assets...';
+                
+                let successCount = 0;
+                for (const file of filesToDownload) {
+                    try {
+                        const res = await fetch(file.path);
+                        if (res.ok) {
+                            const data = await res.arrayBuffer();
+                            const filename = file.path.split('/').pop();
+                            zip.file(file.folder + "/" + filename, data);
+                            successCount++;
+                            statusText.innerText = 'Packaging: ' + successCount + '/' + filesToDownload.length + ' files';
+                        }
+                    } catch (err) {
+                        console.error('Error fetching file:', file.path, err);
+                    }
+                }
+                
+                if (successCount === 0) {
+                    alert('Failed to download any assets!');
+                    statusText.style.display = 'none';
+                    return;
+                }
+                
+                statusText.innerText = 'Generating ZIP file...';
+                const content = await zip.generateAsync({ type: 'blob' });
+                
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(content);
+                link.download = 'page-assets-' + type + '.zip';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                statusText.innerText = 'Download complete!';
+                setTimeout(() => { statusText.style.display = 'none'; }, 2000);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('btn-floating-download');
+            const menu = document.getElementById('download-menu');
+            
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (menu.style.display === 'none') {
+                    menu.style.display = 'block';
+                    btn.style.transform = 'scale(0.9) rotate(90deg)';
+                } else {
+                    menu.style.display = 'none';
+                    btn.style.transform = 'none';
+                }
+            });
+            
+            document.addEventListener('click', () => {
+                menu.style.display = 'none';
+                btn.style.transform = 'none';
+            });
+            
+            menu.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        });
+        </script>
 </body>
 </html>
 <!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
