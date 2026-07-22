@@ -3,14 +3,14 @@ import re
 with open('/Users/cp/Ronak/CP/CP Website/servicepages/industry-template.html', 'r') as f:
     html = f.read()
 
-header_match = re.search(r'(.*?)(<main[^>]*>)', html, re.DOTALL | re.IGNORECASE)
-footer_match = re.search(r'(</main>.*)', html, re.DOTALL | re.IGNORECASE)
+header_match = re.search(r'(.*?)(<section[^>]*id="hero"[^>]*>)', html, re.DOTALL | re.IGNORECASE)
+footer_match = re.search(r'(<footer class="site-footer".*)', html, re.DOTALL | re.IGNORECASE)
 
 if not header_match or not footer_match:
-    print("Could not find main tags!")
+    print("Could not find section or footer tags!")
     exit(1)
 
-header_html = header_match.group(0)
+header_html = header_match.group(1)
 footer_html = footer_match.group(1)
 
 new_css = """
