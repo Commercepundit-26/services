@@ -343,13 +343,13 @@ new_css = """
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: var(--agro-surface);
+  background: var(--agro-surface-alt);
   color: var(--agro-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  box-shadow: none;
 }
 .agro-value-card h3 {
   font-size: 1.35rem;
@@ -509,27 +509,27 @@ middle_html = """
       <div class="agro-prob-card">
         <div class="agro-prob-num">01</div>
         <h3>Spurious Product in the Channel</h3>
-        <p>“Your biggest ag retailer is quietly stocking a look-alike at 20% below your list price. Can you prove to a grower which bag is real?” Unregistered formulators and repackagers sell copies that look right on the shelf. A grower finds out only when the spray fails.</p>
+        <p>Your biggest ag retailer is quietly stocking a look-alike at 20% below your list price. Can you prove to a grower which bag is real? Unregistered formulators and repackagers sell copies that look right on the shelf. A grower finds out only when the spray fails.</p>
       </div>
       <div class="agro-prob-card">
         <div class="agro-prob-num">02</div>
         <h3>Sell-In Doesn't Equal Sell-Out</h3>
-        <p>“Distributor orders looked strong all season. Why is next year's demand forecast already wrong?” What shipped and what actually moved through the dealer network to a grower are different numbers, and production plans get built on the wrong one.</p>
+        <p>Distributor orders looked strong all season. Why is next year's demand forecast already wrong? What shipped and what actually moved through the dealer network to a grower are different numbers, and production plans get built on the wrong one.</p>
       </div>
       <div class="agro-prob-card">
         <div class="agro-prob-num">03</div>
         <h3>Regulatory Audit, No Notice</h3>
-        <p>“A State Lead Agency inspector wants batch-level RUP records and WPS documentation. This week.” Reconstructing that from spreadsheets turns a routine inspection into a multi-day scramble.</p>
+        <p>A State Lead Agency inspector wants batch-level RUP records and WPS documentation. This week. Reconstructing that from spreadsheets turns a routine inspection into a multi-day scramble.</p>
       </div>
       <div class="agro-prob-card">
         <div class="agro-prob-num">04</div>
         <h3>Misapplication Liability</h3>
-        <p>“A grower used the wrong dosage, and now there's a crop-failure claim with your name on it.” The liability conversation starts with your brand, whether or not the product was ever the actual problem.</p>
+        <p>A grower used the wrong dosage, and now there's a crop-failure claim with your name on it. The liability conversation starts with your brand, whether or not the product was ever the actual problem.</p>
       </div>
       <div class="agro-prob-card">
         <div class="agro-prob-num">05</div>
         <h3>Dealer Trust and Channel Loyalty</h3>
-        <p>“Your dealer's incentive payout has been stuck in review for six weeks. Why would they push your product this season?” Slow, disputed rebate programs cost the shelf space the payout was supposed to buy.</p>
+        <p>Your dealer's incentive payout has been stuck in review for six weeks. Why would they push your product this season? Slow, disputed rebate programs cost the shelf space the payout was supposed to buy.</p>
       </div>
     </div>
   </div>
