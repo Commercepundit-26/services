@@ -531,6 +531,7 @@
 .integration-header p { color: rgba(0,0,0,0.6); font-size: 1.0625rem; max-width: 600px; margin: 0 auto; line-height: 1.6; }
 
 .integration-grid {
+  perspective: 1000px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
@@ -576,7 +577,8 @@
   color: #6862a7;
 }
 @media (max-width: 992px) {
-  .integration-grid { grid-template-columns: 1fr; }
+  .integration-grid {
+  perspective: 1000px; grid-template-columns: 1fr; }
 }
 /* ============================================
    SECTION 7 — COMPARISON TABLE
@@ -1310,7 +1312,7 @@
         
         <div class="bento-slider">
           <!-- Card 1 -->
-          <div class="bento-card">
+          <div class="bento-card" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.05">
             <div class="bento-icon"><svg class="icon" width="24" height="24"><use href="#icon-users"/></svg></div>
             <h3 class="bento-title">Unjustified Warranty Claims</h3>
             <p class="bento-desc">Customers return broken products expecting a replacement, but the item isn't yours. Without proof, your service center absorbs the cost.</p>
@@ -1318,7 +1320,7 @@
           </div>
           
           <!-- Card 2 -->
-          <div class="bento-card">
+          <div class="bento-card" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.05">
             <div class="bento-icon"><svg class="icon" width="24" height="24"><use href="#icon-globe"/></svg></div>
             <h3 class="bento-title">Cross-Border Grey Markets</h3>
             <p class="bento-desc">Legitimate distributors in low-margin regions are selling inventory into high-margin regions, undercutting your official pricing.</p>
@@ -1326,7 +1328,7 @@
           </div>
           
           <!-- Card 3 -->
-          <div class="bento-card">
+          <div class="bento-card" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.05">
             <div class="bento-icon"><svg class="icon" width="24" height="24"><use href="#icon-box"/></svg></div>
             <h3 class="bento-title">Invisible Stockouts</h3>
             <p class="bento-desc">Fakes fill retail shelves, preventing your real product from moving. Sales drop, but inventory systems show shelves are stocked.</p>
@@ -1334,7 +1336,7 @@
           </div>
 
           <!-- Card 4 -->
-          <div class="bento-card">
+          <div class="bento-card" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.05">
             <div class="bento-icon"><svg class="icon" width="24" height="24"><use href="#icon-report"/></svg></div>
             <h3 class="bento-title">Manual Compliance</h3>
             <p class="bento-desc">Global track-and-trace mandates require heavy manual reporting that slows down production lines.</p>
@@ -1342,7 +1344,7 @@
           </div>
 
           <!-- Card 5 -->
-          <div class="bento-card">
+          <div class="bento-card" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.05">
             <div class="bento-icon"><svg class="icon" width="24" height="24"><use href="#icon-alert-triangle"/></svg></div>
             <h3 class="bento-title">Reputation Damage</h3>
             <p class="bento-desc">A consumer buys a substandard fake on a marketplace and leaves a 1-star review on your official product page.</p>
@@ -2150,5 +2152,6 @@ if (vstepList && vstepLine) {
 }
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 </body>
 </html>
