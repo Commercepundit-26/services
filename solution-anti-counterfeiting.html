@@ -670,21 +670,32 @@
 .vstep-list::before {
   content: '';
   position: absolute;
-  left: 24px;
-  top: 16px;
-  bottom: 16px;
+  left: 23px;
+  top: 32px;
+  bottom: 32px;
   width: 2px;
   background: rgba(0,0,0,0.06);
+  z-index: 0;
+}
+.vstep-progress-line {
+  position: absolute;
+  left: 23px;
+  top: 32px;
+  width: 2px;
+  background: #6862a7;
+  height: 0%;
+  z-index: 1;
+  transition: height 0.1s ease-out;
 }
 .vstep-item {
   display: grid;
   grid-template-columns: 48px 1fr;
-  gap: 32px;
+  gap: 40px;
   align-items: flex-start;
   padding: 32px 0;
   position: relative;
 }
-.vstep-num {
+.vstep-icon {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -693,23 +704,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #111111;
-  font-size: 14px;
-  font-weight: 800;
+  color: rgba(0,0,0,0.4);
   position: relative;
   z-index: 2;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
-.vstep-item:hover .vstep-num {
+.vstep-item.is-active .vstep-icon {
   background: #6862a7;
   border-color: #6862a7;
   color: #ffffff;
 }
 .vstep-content {
-  padding-top: 12px;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+}
+.vstep-outline-num {
+  font-size: 4rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(0,0,0,0.1);
+  line-height: 0.8;
+  margin-bottom: 4px;
+  margin-left: -2px;
+  transition: -webkit-text-stroke 0.4s ease;
+}
+.vstep-item.is-active .vstep-outline-num {
+  -webkit-text-stroke: 1.5px rgba(104,98,167,0.25);
 }
 .vstep-title {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #111111;
   margin-bottom: 8px;
@@ -1421,7 +1445,7 @@
 
     <!-- ============================================
          SECTION 8: ROLLOUT PROCESS — VERTICAL STEP
-         Layout: Vertical list with left-aligned numbers
+         Layout: Vertical list with left-aligned icons and progress line
          ============================================ -->
     <section class="vstep-section">
       <div class="vstep-inner">
@@ -1432,37 +1456,48 @@
         </div>
 
         <div class="vstep-list">
+          <div class="vstep-progress-line"></div>
+          
           <div class="vstep-item">
-            <div class="vstep-num">01</div>
+            <div class="vstep-icon"><svg class="icon" width="20" height="20"><use href="#icon-search"/></svg></div>
             <div class="vstep-content">
+              <div class="vstep-outline-num">01</div>
               <h3 class="vstep-title">Scope &amp; Line Audit</h3>
               <p class="vstep-desc">We map your packaging lines, printer capabilities, and ERP structure to define the exact data flow.</p>
             </div>
           </div>
+          
           <div class="vstep-item">
-            <div class="vstep-num">02</div>
+            <div class="vstep-icon"><svg class="icon" width="20" height="20"><use href="#icon-database"/></svg></div>
             <div class="vstep-content">
+              <div class="vstep-outline-num">02</div>
               <h3 class="vstep-title">Configure &amp; Integrate</h3>
               <p class="vstep-desc">API connections are established with your ERP and our platform is configured for your specific product hierarchy.</p>
             </div>
           </div>
+          
           <div class="vstep-item">
-            <div class="vstep-num">03</div>
+            <div class="vstep-icon"><svg class="icon" width="20" height="20"><use href="#icon-barcode"/></svg></div>
             <div class="vstep-content">
+              <div class="vstep-outline-num">03</div>
               <h3 class="vstep-title">Print Trial</h3>
               <p class="vstep-desc">We run a pilot batch on your actual packaging line to ensure QR codes are scannable at line speeds.</p>
             </div>
           </div>
+          
           <div class="vstep-item">
-            <div class="vstep-num">04</div>
+            <div class="vstep-icon"><svg class="icon" width="20" height="20"><use href="#icon-users"/></svg></div>
             <div class="vstep-content">
+              <div class="vstep-outline-num">04</div>
               <h3 class="vstep-title">Warehouse Training</h3>
               <p class="vstep-desc">Your operational teams are trained on aggregating boxes to pallets using their existing hardware.</p>
             </div>
           </div>
+          
           <div class="vstep-item">
-            <div class="vstep-num">05</div>
+            <div class="vstep-icon"><svg class="icon" width="20" height="20"><use href="#icon-check"/></svg></div>
             <div class="vstep-content">
+              <div class="vstep-outline-num">05</div>
               <h3 class="vstep-title">Go Live</h3>
               <p class="vstep-desc">The system is turned on for production. Serialized, protected products begin moving into the supply chain.</p>
             </div>
