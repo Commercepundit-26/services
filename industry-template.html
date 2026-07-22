@@ -1007,7 +1007,7 @@
          ============================================ -->
 
 <style>
-/* AGROCHEMICALS REDESIGN: Premium UI/UX Light Mode */
+/* AGROCHEMICALS REDESIGN V6: Premium UI/UX Light Mode & Carousels */
 :root {
   --agro-surface: #ffffff;
   --agro-surface-alt: #f7f7fa;
@@ -1050,13 +1050,41 @@
   line-height: 1.6;
 }
 
-/* 1. Masonry Problems Grid */
-.agro-prob-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
+/* Fix Hero Spacing */
+.internal-hero-content {
+  padding-top: 140px !important;
+  padding-bottom: 120px !important;
 }
+
+/* CAROUSEL BASE STYLES */
+.agro-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 24px;
+  padding-bottom: 40px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--agro-primary-light) transparent;
+}
+.agro-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+.agro-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+.agro-carousel::-webkit-scrollbar-thumb {
+  background-color: rgba(104, 98, 167, 0.3);
+  border-radius: 20px;
+}
+.agro-carousel:hover::-webkit-scrollbar-thumb {
+  background-color: var(--agro-primary);
+}
+
+/* 1. Risks Carousel */
 .agro-prob-card {
+  flex: 0 0 380px;
+  scroll-snap-align: start;
   background: var(--agro-surface);
   border: 1px solid var(--agro-border);
   border-radius: 20px;
@@ -1078,7 +1106,7 @@
   line-height: 1;
 }
 .agro-prob-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--agro-dark);
   margin-bottom: 16px;
@@ -1090,14 +1118,10 @@
   margin: 0;
 }
 
-/* 2. Platform Capabilities Bento */
-.agro-bento-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  grid-auto-rows: minmax(180px, auto);
-}
+/* 2. Platform Capabilities Carousel */
 .agro-bento-item {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
   background: var(--agro-surface);
   border: 1px solid var(--agro-border);
   border-radius: 24px;
@@ -1111,10 +1135,6 @@
 .agro-bento-item:hover {
   border-color: rgba(104, 98, 167, 0.3);
   box-shadow: 0 16px 40px rgba(104, 98, 167, 0.08);
-}
-.agro-bento-item.large {
-  grid-column: span 2;
-  background: var(--agro-surface-alt);
 }
 .agro-bento-icon {
   width: 48px;
@@ -1147,14 +1167,14 @@
   border-radius: 24px;
   overflow: hidden;
   position: sticky;
-  top: 120px;
+  top: 100px;
   box-shadow: 0 -10px 40px rgba(0,0,0,0.02);
   transition: transform 0.3s ease;
 }
-.agro-stack-card:nth-child(1) { top: 120px; }
-.agro-stack-card:nth-child(2) { top: 140px; }
-.agro-stack-card:nth-child(3) { top: 160px; }
-.agro-stack-card:nth-child(4) { top: 180px; }
+.agro-stack-card:nth-child(1) { top: 100px; }
+.agro-stack-card:nth-child(2) { top: 120px; }
+.agro-stack-card:nth-child(3) { top: 140px; }
+.agro-stack-card:nth-child(4) { top: 160px; }
 
 .agro-stack-header {
   background: var(--agro-surface-alt);
@@ -1206,17 +1226,22 @@
 }
 
 /* 4. Enterprise Value UI/UX Redesign */
-.agro-value-wrapper {
+.agro-value-wrapper, .agro-comp-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: center;
+  align-items: flex-start; /* FIX: Aligns the sticky header to the top of the cards grid */
 }
-.agro-value-sticky {
+.agro-comp-inner {
+  grid-template-columns: 1fr 2fr;
+}
+
+.agro-value-sticky, .agro-comp-sidebar {
   position: sticky;
-  top: 120px;
+  top: 100px; /* FIX: Stays sticky right under the nav bar */
 }
-.agro-value-sticky h2 {
+
+.agro-value-sticky h2, .agro-comp-sidebar h2 {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 800;
   color: var(--agro-dark);
@@ -1224,11 +1249,12 @@
   letter-spacing: -0.02em;
   margin-bottom: 24px;
 }
-.agro-value-sticky p {
-  font-size: 1.25rem;
+.agro-value-sticky p, .agro-comp-sidebar p {
+  font-size: 1.125rem;
   color: var(--agro-text);
   line-height: 1.6;
 }
+
 .agro-value-list {
   display: flex;
   flex-direction: column;
@@ -1240,17 +1266,32 @@
   border-radius: 20px;
   border: 1px solid var(--agro-border);
   transition: transform 0.3s ease, background 0.3s ease;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
 }
 .agro-value-card:hover {
   background: var(--agro-surface);
   transform: translateX(-8px);
   box-shadow: 12px 12px 40px rgba(0,0,0,0.04);
 }
+.agro-value-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--agro-surface);
+  color: var(--agro-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
 .agro-value-card h3 {
   font-size: 1.35rem;
   font-weight: 800;
   color: var(--agro-dark);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .agro-value-card p {
   font-size: 1.0625rem;
@@ -1259,24 +1300,7 @@
   margin: 0;
 }
 
-/* 5. Compliance Sidebar */
-.agro-comp-inner {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 60px;
-}
-.agro-comp-sidebar {
-  position: sticky;
-  top: 120px;
-}
-.agro-comp-sidebar h2 {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  font-weight: 800;
-  margin-bottom: 16px;
-  color: var(--agro-dark);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
+/* 5. Compliance Sidebar items */
 .agro-comp-list {
   display: flex;
   flex-direction: column;
@@ -1319,14 +1343,11 @@
 
 /* Responsive */
 @media (max-width: 992px) {
-  .agro-bento-grid { grid-template-columns: 1fr 1fr; }
-  .agro-bento-item.large { grid-column: span 1; }
   .agro-stack-body, .agro-value-wrapper, .agro-comp-inner { grid-template-columns: 1fr; gap: 40px; }
   .agro-stack-col:first-child { border-right: none; border-bottom: 1px solid var(--agro-border); }
   .agro-value-sticky, .agro-comp-sidebar { position: static; }
-}
-@media (max-width: 768px) {
-  .agro-bento-grid { grid-template-columns: 1fr; }
+  .agro-prob-card { flex: 0 0 320px; }
+  .agro-bento-item { flex: 0 0 280px; }
 }
 </style>
 <section class="stage stage--hero internal-hero" id="hero">
@@ -1336,13 +1357,13 @@
 <div class="stage__inner container">
 <div class="grid-2col" style="align-items: center; grid-template-columns: 1.05fr 0.95fr; gap: 48px;">
 <div>
-<p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">AGROCHEMICALS</p>
+
 <h1 class="page-title" style="color: #ffffff; font-size: clamp(2.4rem, 4.5vw, 3.8rem); line-height: 1.15; font-weight: 800; margin-bottom: 1.25rem;">Every bag verified. Every dealer accountable. Every acre protected.</h1>
 <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.125rem; line-height: 1.6; margin-bottom: 2rem;">Smart Epsilon protects every unit with overt, covert, and forensic verification working together — so a fake doesn't just need to look right, it needs to beat three independent layers at once.</p>
 <div class="trust-chips-row" style="margin-bottom: 2.5rem;">
-<span class="features-pill-tag" style="background: rgba(255,255,255,0.08); color: #ffffff; border: 1px solid rgba(255,255,255,0.15);">EPA / FIFRA-ready compliance</span>
-<span class="features-pill-tag" style="background: rgba(255,255,255,0.08); color: #ffffff; border: 1px solid rgba(255,255,255,0.15);">Works with your ERP</span><span class="features-pill-tag" style="background: rgba(255,255,255,0.08); color: #ffffff; border: 1px solid rgba(255,255,255,0.15);">Live in ~6 weeks</span>
-<span class="features-pill-tag" style="background: rgba(255,255,255,0.08); color: #ffffff; border: 1px solid rgba(255,255,255,0.15);"><svg class="icon" height="14" style="color: #6862a7;" width="14"><use href="#icon-check"></use></svg> Live in ~6 weeks</span>
+<span class="features-pill-tag">EPA / FIFRA-ready compliance</span>
+<span class="features-pill-tag">Works with your ERP</span>
+<span class="features-pill-tag">Live in ~6 weeks</span>
 </div>
 <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
 <span data-magnetic=""><a class="btn btn-primary" href="#cta" style="padding: 14px 28px;">Schedule an Agrochemicals Demo</a></span>
@@ -1389,7 +1410,7 @@
          Layout: Vertical stacked quotes, magazine-editorial
          ============================================ -->
 
-<!-- 2. REAL SUPPLY CHAIN PROBLEMS -->
+<!-- 2. REAL SUPPLY CHAIN PROBLEMS (CAROUSEL) -->
 <section class="agro-section alt">
 <div class="agro-container">
 <div class="agro-header">
@@ -1397,7 +1418,7 @@
 <h2>Real Supply Chain Problems</h2>
 <p>Agrochemical supply chains break in more ways than any one page can cover — here are the five that cost the most, most often.</p>
 </div>
-<div class="agro-prob-grid">
+<div class="agro-carousel">
 <div class="agro-prob-card">
 <div class="agro-prob-num">01</div>
 <h3>Spurious Product in the Channel</h3>
@@ -1426,7 +1447,7 @@
 </div>
 </div>
 </section>
-<!-- 3. PLATFORM CAPABILITIES REDESIGN -->
+<!-- 3. PLATFORM CAPABILITIES REDESIGN (CAROUSEL) -->
 <section class="agro-section">
 <div class="agro-container">
 <div class="agro-header">
@@ -1434,8 +1455,8 @@
 <h2>Solutions</h2>
 <p>Ten specific problems Smart Epsilon solves for agrochemical manufacturers.</p>
 </div>
-<div class="agro-bento-grid">
-<div class="agro-bento-item large">
+<div class="agro-carousel">
+<div class="agro-bento-item">
 <div class="agro-bento-icon"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" width="24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
 <p>Verify a crop protection product's authenticity before purchase — no device required for the first check.</p>
 </div>
@@ -1451,7 +1472,7 @@
 <div class="agro-bento-icon"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" width="24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
 <p>Deliver dosage, tank-mix compatibility, and safety guidance at the point of scan, in the applicator's language.</p>
 </div>
-<div class="agro-bento-item large">
+<div class="agro-bento-item">
 <div class="agro-bento-icon"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" width="24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
 <p>Calculate dealer incentive payouts automatically from verified sales — not self-reported invoice volume.</p>
 </div>
@@ -1577,7 +1598,7 @@
 </div>
 </div>
 </section>
-<!-- 5. ENTERPRISE VALUE REDESIGN -->
+<!-- 5. ENTERPRISE VALUE REDESIGN (TOP-ALIGNED STICKY) -->
 <section class="agro-section">
 <div class="agro-container">
 <div class="agro-value-wrapper">
@@ -1588,42 +1609,66 @@
 </div>
 <div class="agro-value-list">
 <div class="agro-value-card">
+<div class="agro-value-icon"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" width="24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg></div>
+<div>
 <h3>End-to-End Product Visibility</h3>
 <p>From formulation to field, know where every unit is at every stage — not just inside your own four walls.</p>
 </div>
+</div>
 <div class="agro-value-card">
+<div class="agro-value-icon"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" width="24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+<div>
 <h3>Protected Brand Trust</h3>
 <p>Fewer efficacy complaints and liability disputes traced back to spurious product reaching the shelf.</p>
 </div>
+</div>
 <div class="agro-value-card">
+<div class="agro-value-icon"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" width="24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg></div>
+<div>
 <h3>Reduced Liability Exposure</h3>
 <p>A timestamped, defensible record of exactly what dosage and safety guidance was communicated, if a misapplication claim ever surfaces.</p>
 </div>
+</div>
 <div class="agro-value-card">
+<div class="agro-value-icon"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" width="24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg></div>
+<div>
 <h3>Accurate Demand Planning</h3>
 <p>Production and inventory decisions built on real, verified sell-through — not shipment estimates that turn out wrong by harvest.</p>
 </div>
+</div>
 <div class="agro-value-card">
+<div class="agro-value-icon"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" width="24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></div>
+<div>
 <h3>Audit-Ready Compliance</h3>
 <p>Batch-level FIFRA, RUP, and WPS records available in minutes during a state or federal inspection, not reconstructed under deadline pressure.</p>
 </div>
+</div>
 <div class="agro-value-card">
+<div class="agro-value-icon"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" width="24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div>
+<div>
 <h3>Stronger Dealer Relationships</h3>
 <p>Faster, dispute-resistant incentive payouts that reward what a dealer actually sold — protecting shelf space at the next reorder.</p>
 </div>
+</div>
 <div class="agro-value-card">
+<div class="agro-value-icon"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" width="24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
+<div>
 <h3>Faster Dispute Resolution</h3>
 <p>Visual and data-backed proof resolves freight, distributor, and dealer disagreements in minutes instead of open-ended back-and-forth.</p>
 </div>
+</div>
 <div class="agro-value-card">
+<div class="agro-value-icon"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" width="24"><path d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path><path d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path></svg></div>
+<div>
 <h3>Protected Cold-Chain Integrity</h3>
 <p>Real-time temperature monitoring catches an excursion before an entire batch of seed treatment is lost.</p>
 </div>
 </div>
 </div>
 </div>
+</div>
 </section>
-<!-- 6. COMPLIANCE & REGULATORY -->
+<!-- 6. COMPLIANCE & REGULATORY (TOP-ALIGNED STICKY) -->
 <section class="agro-section alt">
 <div class="agro-container">
 <div class="agro-comp-inner">
