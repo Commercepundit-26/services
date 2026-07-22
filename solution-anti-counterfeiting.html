@@ -42,7 +42,7 @@
    SECTION 2 — CINEMATIC QUOTE WALL
    ============================================ */
 .quote-wall-section {
-  background: #0b1220;
+  background: #ffffff;
   padding: 120px 0;
   overflow: hidden;
 }
@@ -74,14 +74,14 @@
 .quote-wall-title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  color: #ffffff;
+  color: #111111;
   line-height: 1.1;
   max-width: 720px;
   margin: 0;
 }
 .quote-wall-subtitle {
   font-size: 1.0625rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(0,0,0,0.6);
   margin: 1rem 0 0;
   line-height: 1.6;
 }
@@ -91,12 +91,12 @@
   grid-template-columns: 60px 1fr;
   gap: 0;
   padding: 52px 0;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(0,0,0,0.06);
   position: relative;
   overflow: hidden;
 }
 .quote-item:last-child {
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 .quote-item__num {
   font-size: 11px;
@@ -116,7 +116,7 @@
 .quote-item__q {
   font-size: clamp(1.125rem, 2vw, 1.375rem);
   font-weight: 700;
-  color: #ffffff;
+  color: #111111;
   line-height: 1.4;
   font-style: italic;
   position: relative;
@@ -135,7 +135,7 @@
 }
 .quote-item__answer {
   font-size: 0.9375rem;
-  color: rgba(255,255,255,0.55);
+  color: rgba(0,0,0,0.6);
   line-height: 1.7;
   padding-top: 2px;
   border-left: 1px solid rgba(104,98,167,0.2);
@@ -143,7 +143,7 @@
 }
 .quote-item__answer em {
   font-style: normal;
-  color: rgba(255,255,255,0.8);
+  color: rgba(0,0,0,0.8);
 }
 .quote-item-bar {
   position: absolute;
@@ -351,7 +351,7 @@
    SECTION 4 — EVALUATION Q&A (ACCORDION REVEAL)
    ============================================ */
 .evaluation-section {
-  background: #0b1220;
+  background: #ffffff;
   padding: 120px 0;
 }
 .evaluation-inner {
@@ -363,15 +363,15 @@
   margin-bottom: 64px;
 }
 .eval-header .eyebrow { color: #6862a7; margin-bottom: 0.75rem; }
-.eval-header h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); color: #ffffff; font-weight: 800; margin: 0 0 1rem; }
-.eval-header p { color: rgba(255,255,255,0.5); font-size: 1rem; line-height: 1.6; margin: 0; }
+.eval-header h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); color: #111111; font-weight: 800; margin: 0 0 1rem; }
+.eval-header p { color: rgba(0,0,0,0.6); font-size: 1rem; line-height: 1.6; margin: 0; }
 
 .eval-item {
-  border-top: 1px solid rgba(255,255,255,0.07);
+  border-top: 1px solid rgba(0,0,0,0.07);
   position: relative;
   overflow: hidden;
 }
-.eval-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.07); }
+.eval-item:last-child { border-bottom: 1px solid rgba(0,0,0,0.07); }
 .eval-trigger {
   width: 100%;
   display: flex;
@@ -387,22 +387,22 @@
   flex: 1;
   font-size: 1.0625rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.65);
+  color: rgba(0,0,0,0.65);
   line-height: 1.4;
   font-style: italic;
   transition: color 0.25s;
 }
-.eval-item.is-open .eval-trigger-q { color: #ffffff; }
+.eval-item.is-open .eval-trigger-q { color: #111111; }
 .eval-trigger-icon {
   width: 32px;
   height: 32px;
   flex-shrink: 0;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(0,0,0,0.12);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255,255,255,0.4);
+  color: rgba(0,0,0,0.4);
   transition: all 0.3s;
 }
 .eval-item.is-open .eval-trigger-icon {
@@ -433,7 +433,7 @@
 }
 .eval-answer-body {
   font-size: 0.9375rem;
-  color: rgba(255,255,255,0.6);
+  color: rgba(0,0,0,0.6);
   line-height: 1.7;
 }
 .eval-purple-bar {
@@ -538,7 +538,7 @@
    SECTION 6 — STACK INTEGRATION (PILLAR WALL)
    ============================================ */
 .integration-section {
-  background: #0b1220;
+  background: #ffffff;
   padding: 120px 0;
 }
 .integration-inner {
@@ -547,8 +547,8 @@
   padding: 0 2rem;
 }
 .integration-header { text-align: center; margin-bottom: 72px; }
-.integration-header h2 { color: #ffffff; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
-.integration-header p { color: rgba(255,255,255,0.5); font-size: 1rem; line-height: 1.6; max-width: 560px; margin: 0 auto; }
+.integration-header h2 { color: #111111; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
+.integration-header p { color: rgba(0,0,0,0.6); font-size: 1rem; line-height: 1.6; max-width: 560px; margin: 0 auto; }
 .integration-pillars {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -609,12 +609,12 @@
 .ipillar-name {
   font-size: 1.0625rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #111111;
   margin-bottom: 8px;
 }
 .ipillar-desc {
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(0,0,0,0.6);
   line-height: 1.6;
 }
 .ipillar-badge {
@@ -706,7 +706,7 @@
    SECTION 8 — ROLLOUT TIMELINE
    ============================================ */
 .rollout-section {
-  background: #0b1220;
+  background: #ffffff;
   padding: 120px 0;
 }
 .rollout-inner {
@@ -715,8 +715,8 @@
   padding: 0 2rem;
 }
 .rollout-header { margin-bottom: 72px; }
-.rollout-header h2 { color: #ffffff; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
-.rollout-header p { color: rgba(255,255,255,0.5); font-size: 1rem; max-width: 640px; line-height: 1.7; }
+.rollout-header h2 { color: #111111; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
+.rollout-header p { color: rgba(0,0,0,0.6); font-size: 1rem; max-width: 640px; line-height: 1.7; }
 
 .rollout-track {
   position: relative;
@@ -758,7 +758,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #1e223b;
+  background: #ffffff;
   border: 2px solid rgba(104,98,167,0.3);
   display: flex;
   align-items: center;
@@ -779,12 +779,12 @@
 .rollout-step-name {
   font-size: 13px;
   font-weight: 800;
-  color: #ffffff;
+  color: #111111;
   margin-bottom: 8px;
 }
 .rollout-step-desc {
   font-size: 12px;
-  color: rgba(255,255,255,0.35);
+  color: rgba(0,0,0,0.6);
   line-height: 1.5;
 }
 
@@ -878,7 +878,7 @@
    SECTION 10 — FAQ MINIMAL ACCORDION
    ============================================ */
 .faq-section {
-  background: #0b1220;
+  background: #ffffff;
   padding: 120px 0;
 }
 .faq-inner {
@@ -887,11 +887,11 @@
   padding: 0 2rem;
 }
 .faq-header { text-align: center; margin-bottom: 64px; }
-.faq-header h2 { color: #ffffff; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 0.75rem; }
-.faq-header p { color: rgba(255,255,255,0.45); font-size: 1rem; }
+.faq-header h2 { color: #111111; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 0.75rem; }
+.faq-header p { color: rgba(0,0,0,0.6); font-size: 1rem; }
 
 .faq-item {
-  border-bottom: 1px solid rgba(255,255,255,0.07);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
   overflow: hidden;
 }
 .faq-trigger {
@@ -909,11 +909,11 @@
 .faq-trigger-q {
   font-size: 1rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.75);
+  color: rgba(0,0,0,0.7);
   line-height: 1.4;
   transition: color 0.25s;
 }
-.faq-item.is-open .faq-trigger-q { color: #ffffff; }
+.faq-item.is-open .faq-trigger-q { color: #111111; }
 .faq-trigger-dot {
   width: 8px;
   height: 8px;
@@ -932,7 +932,7 @@
 .faq-answer-inner {
   padding-bottom: 28px;
   font-size: 0.9375rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(0,0,0,0.6);
   line-height: 1.7;
 }
 
@@ -1911,7 +1911,7 @@
         rect.setAttribute('height', CELL_SIZE - 2);
         rect.setAttribute('rx', '4');
         rect.setAttribute('ry', '4');
-        rect.setAttribute('fill', '#1e223b');
+        rect.setAttribute('fill', 'rgba(30, 34, 59, 0.5)');
         rect.style.transition = 'fill 0.2s ease';
         rect.style.cursor = 'pointer';
         
@@ -1919,7 +1919,7 @@
           this.setAttribute('fill', '#6862a7');
         });
         rect.addEventListener('mouseleave', function() {
-          this.setAttribute('fill', '#1e223b');
+          this.setAttribute('fill', 'rgba(30, 34, 59, 0.5)');
         });
         
         svg.appendChild(rect);
