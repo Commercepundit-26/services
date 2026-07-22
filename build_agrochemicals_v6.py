@@ -548,7 +548,7 @@ middle_html = """
         <div class="agro-bento-content"><p>Verify a crop protection product’s authenticity before purchase, no device required for the first check.</p></div>
       </div>
       <div class="agro-bento-item">
-        <img class="agro-bento-img" src="assets/images/card-bg-6.jpg" alt="Demand Estimates">
+        <img class="agro-bento-img" src="assets/images/card-bg-5.jpg" alt="Demand Estimates">
         <div class="agro-bento-content"><p>Replace shipment-based demand estimates with real, scan-confirmed sell-through data.</p></div>
       </div>
       <div class="agro-bento-item">
@@ -576,11 +576,11 @@ middle_html = """
         <div class="agro-bento-content"><p>Monitor temperature compliance for cold-sensitive seed treatments in storage and transit.</p></div>
       </div>
       <div class="agro-bento-item">
-        <img class="agro-bento-img" src="assets/images/card-bg-5.jpg" alt="Flag Shrinkage">
+        <img class="agro-bento-img" src="assets/images/card-bg-9.jpg" alt="Flag Shrinkage">
         <div class="agro-bento-content"><p>Flag shrinkage or theft of high-value patented formulations as it happens, not at the next count.</p></div>
       </div>
       <div class="agro-bento-item">
-        <img class="agro-bento-img" src="assets/images/card-bg-2.jpg" alt="Real-time Visibility">
+        <img class="agro-bento-img" src="assets/images/card-bg-10.jpg" alt="Real-time Visibility">
         <div class="agro-bento-content"><p>Give every dealer real-time visibility into exactly what they’ve earned, and why.</p></div>
       </div>
     </div>
