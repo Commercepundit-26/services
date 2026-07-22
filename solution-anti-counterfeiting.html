@@ -463,6 +463,12 @@
   flex-direction: column;
   position: relative;
   box-shadow: 0 4px 24px rgba(0,0,0,0.02);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(104, 98, 167, 0.4);
+  box-shadow: 0 12px 40px rgba(15, 15, 37, 0.1);
 }
 
 .bento-icon {
@@ -704,7 +710,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(0,0,0,0.4);
+  color: #111111;
   position: relative;
   z-index: 2;
   transition: all 0.4s ease;
@@ -1063,7 +1069,7 @@
         <div class="quote-item" data-quote>
           <div class="quote-item__num">01</div>
           <div class="quote-item__body">
-            <div class="quote-item__q">"A customer was hurt by a counterfeit sold under your name. Whose liability is that?"</div>
+            <div class="quote-item__q">A customer was hurt by a counterfeit sold under your name. Whose liability is that?</div>
             <div class="quote-item__answer">Courts and headlines don't distinguish between <em>"our product"</em> and <em>"a fake wearing our label"</em> as fast as your legal team needs them to — the lawsuit names your brand first.</div>
           </div>
           <div class="quote-item-bar"></div>
@@ -1139,7 +1145,7 @@
               <span class="stb-label">Forensic — AI Watermark</span>
             </div>
           </button>
-          <div style="padding-top: 32px; font-size: 13px; color: rgba(0,0,0,0.4); line-height: 1.6;">
+          <div style="padding-top: 32px; font-size: 13px; color: #111111; line-height: 1.6;">
             QR-based consumer verification sits on top of all three — a fast, familiar way for anyone to confirm authenticity in seconds.
           </div>
         </div>
@@ -1361,7 +1367,7 @@
           
           <!-- Card 1 -->
           <div class="int-card">
-            <img src="assets/sec6_erp_1784700440246.jpg" alt="Software Data Architecture" class="int-card-img" loading="lazy" />
+            <img src="assets/sec6_erp_v2_1784700989638.jpg" alt="Software Data Architecture" class="int-card-img" loading="lazy" />
             <div class="int-card-body">
               <h3 class="int-card-title">ERP &amp; Core Systems</h3>
               <p class="int-card-desc">Native APIs pull product master data directly from SAP, Oracle, Microsoft Dynamics, or your custom ERP. Batch numbers and SKUs sync automatically.</p>
