@@ -36,6 +36,12 @@
   position: relative;
   z-index: 2;
   width: 100%;
+  pointer-events: none;
+}
+.internal-hero-content a,
+.internal-hero-content button,
+.internal-hero-content .light-card {
+  pointer-events: auto;
 }
 
 /* ============================================
@@ -118,20 +124,8 @@
   font-weight: 700;
   color: #111111;
   line-height: 1.4;
-  font-style: italic;
   position: relative;
-  padding-left: 1.5rem;
-}
-.quote-item__q::before {
-  content: '"';
-  position: absolute;
-  left: 0;
-  top: -4px;
-  font-size: 3rem;
-  color: #6862a7;
-  font-style: normal;
-  line-height: 1;
-  font-family: Georgia, serif;
+  /* Quote marks removed per feedback */
 }
 .quote-item__answer {
   font-size: 0.9375rem;
@@ -213,17 +207,16 @@
   content: '';
   position: absolute;
   left: 0;
-  top: 0;
+  right: 0;
   bottom: 0;
-  width: 2px;
+  height: 2px;
   background: #6862a7;
-  transform: scaleY(0);
+  transform: scaleX(0);
   transition: transform 0.3s ease;
-  transform-origin: top;
-  left: -2px;
+  transform-origin: left;
 }
 .sticky-tab-btn.is-active::before {
-  transform: scaleY(1);
+  transform: scaleX(1);
 }
 .sticky-tab-btn.is-active .stb-icon {
   background: #6862a7;
@@ -348,105 +341,63 @@
 }
 
 /* ============================================
-   SECTION 4 — EVALUATION Q&A (ACCORDION REVEAL)
+   SECTION 4 — EVALUATION CARDS
    ============================================ */
 .evaluation-section {
   background: #ffffff;
   padding: 120px 0;
 }
 .evaluation-inner {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 .eval-header {
   margin-bottom: 64px;
 }
-.eval-header .eyebrow { color: #6862a7; margin-bottom: 0.75rem; }
 .eval-header h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); color: #111111; font-weight: 800; margin: 0 0 1rem; }
-.eval-header p { color: rgba(0,0,0,0.6); font-size: 1rem; line-height: 1.6; margin: 0; }
+.eval-header p { color: rgba(0,0,0,0.6); font-size: 1.0625rem; line-height: 1.6; margin: 0; max-width: 600px; }
 
-.eval-item {
-  border-top: 1px solid rgba(0,0,0,0.07);
-  position: relative;
-  overflow: hidden;
+.eval-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
-.eval-item:last-child { border-bottom: 1px solid rgba(0,0,0,0.07); }
-.eval-trigger {
-  width: 100%;
+.eval-card {
+  background: #f7f7fa;
+  border-radius: 16px;
+  padding: 40px;
+  border: 1px solid rgba(0,0,0,0.06);
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 32px 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-align: left;
+  flex-direction: column;
 }
-.eval-trigger-q {
-  flex: 1;
-  font-size: 1.0625rem;
-  font-weight: 700;
-  color: rgba(0,0,0,0.65);
-  line-height: 1.4;
-  font-style: italic;
-  transition: color 0.25s;
-}
-.eval-item.is-open .eval-trigger-q { color: #111111; }
-.eval-trigger-icon {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  border: 1px solid rgba(0,0,0,0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(0,0,0,0.4);
-  transition: all 0.3s;
-}
-.eval-item.is-open .eval-trigger-icon {
-  background: #6862a7;
-  border-color: #6862a7;
-  color: #ffffff;
-  transform: rotate(45deg);
-}
-.eval-answer-wrap {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.eval-item.is-open .eval-answer-wrap {
-  max-height: 300px;
-}
-.eval-answer {
-  padding-bottom: 32px;
-  padding-left: 0;
-}
-.eval-answer-q {
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: #6862a7;
-  margin-bottom: 12px;
+.eval-card-role {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
+  color: #6862a7;
+  margin-bottom: 16px;
 }
-.eval-answer-body {
+.eval-card-q {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #111111;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+.eval-card-a {
   font-size: 0.9375rem;
   color: rgba(0,0,0,0.6);
   line-height: 1.7;
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0,0,0,0.08);
 }
-.eval-purple-bar {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  background: #6862a7;
-  width: 0;
-  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+@media (max-width: 768px) {
+  .eval-grid { grid-template-columns: 1fr; }
 }
-.eval-item.is-open .eval-purple-bar { width: 100%; }
-
 /* ============================================
    SECTION 5 — BENTO GRID (WHAT IT SOLVES)
    ============================================ */
@@ -523,88 +474,68 @@
   .bento-card--large, .bento-card--small { grid-column: span 6; }
 }
 /* ============================================
-   SECTION 6 — CENTRAL ORBIT (STACK INTEGRATION)
+   SECTION 6 — 3 COLUMN IMAGE CARDS
    ============================================ */
-.orbit-section {
+.integration-section {
   background: #ffffff;
   padding: 120px 0;
-  overflow: hidden;
 }
-.orbit-inner {
-  max-width: 1000px;
+.integration-inner {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
-.orbit-header { text-align: center; margin-bottom: 80px; }
-.orbit-header h2 { color: #111111; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
-.orbit-header p { color: rgba(0,0,0,0.6); font-size: 1.0625rem; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.integration-header { text-align: center; margin-bottom: 72px; }
+.integration-header h2 { color: #111111; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
+.integration-header p { color: rgba(0,0,0,0.6); font-size: 1.0625rem; max-width: 600px; margin: 0 auto; line-height: 1.6; }
 
-.orbit-container {
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.int-card {
+  background: #f7f7fa;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  position: relative;
-  max-width: 720px;
-  margin: 0 auto;
 }
-.orbit-container::before {
-  content: '';
-  position: absolute;
-  left: 36px;
-  top: 40px;
-  bottom: 40px;
-  width: 2px;
-  background: rgba(104,98,167,0.15);
-  z-index: 0;
+.int-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
-.orbit-item {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 32px;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-.orbit-icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 2px solid #6862a7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6862a7;
-  box-shadow: 0 0 0 8px rgba(104,98,167,0.08);
-}
-.orbit-body {
-  background: #f7f7fa;
-  border-radius: 16px;
+.int-card-body {
   padding: 32px;
-  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
-.orbit-name {
-  font-size: 1.125rem;
+.int-card-title {
+  font-size: 1.25rem;
   font-weight: 800;
   color: #111111;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
-.orbit-desc {
+.int-card-desc {
   font-size: 0.9375rem;
   color: rgba(0,0,0,0.6);
   line-height: 1.6;
+  margin-bottom: 24px;
 }
-.orbit-badge {
-  display: inline-block;
-  margin-top: 16px;
+.int-card-badge {
+  margin-top: auto;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #ffffff;
-  background: #111111;
-  padding: 4px 12px;
-  border-radius: 4px;
+  color: #6862a7;
+}
+@media (max-width: 992px) {
+  .integration-grid { grid-template-columns: 1fr; }
 }
 /* ============================================
    SECTION 7 — COMPARISON TABLE
@@ -1002,7 +933,7 @@
         <div class="stage__inner container">
           <div class="grid-2col" style="align-items: center; grid-template-columns: 1.05fr 0.95fr; gap: 48px;">
             <div>
-              <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Anti-Counterfeiting Solution</p>
+              <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">Anti-Counterfeiting Solution</p>
               <h1 class="page-title" style="color: #ffffff; font-size: clamp(2.4rem, 4.5vw, 3.8rem); line-height: 1.15; font-weight: 800; margin-bottom: 1.25rem;">Give counterfeiters three problems, not one.</h1>
               <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.125rem; line-height: 1.6; margin-bottom: 2rem;">Smart Epsilon protects every unit with overt, covert, and forensic verification working together — so a fake doesn't just need to look right, it needs to beat three independent layers at once.</p>
 
@@ -1211,69 +1142,44 @@
     </section>
 
     <!-- ============================================
-         SECTION 4: EVALUATION Q&A — ACCORDION REVEAL
-         Layout: Dark bg, numbered Q&A expandable accordion
+         SECTION 4: EVALUATION Q&A — STATIC CARDS
+         Layout: 2x2 Grid of Stakeholder Cards
          ============================================ -->
     <section class="evaluation-section">
       <div class="evaluation-inner">
         <div class="eval-header">
-          <p class="eyebrow">However you're evaluating this</p>
-          <h2>The question changes depending on who's asking. The answer doesn't.</h2>
-          <p>Whether it's your legal team, compliance officer, or VP of operations — here's how Smart Epsilon answers each perspective.</p>
+          <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">However you're evaluating this</p>
+          <h2>Cross-functional alignment</h2>
+          <p>Different stakeholders have different definitions of success. Smart Epsilon addresses them all.</p>
         </div>
 
-        <div class="eval-list">
-          <div class="eval-item" data-eval>
-            <button class="eval-trigger" aria-expanded="false">
-              <div class="eval-trigger-q">"Can a consumer actually tell the difference without our help?"</div>
-              <div class="eval-trigger-icon">
-                <svg class="icon" width="14" height="14"><use href="#icon-plus"/></svg>
-              </div>
-            </button>
-            <div class="eval-answer-wrap" role="region">
-              <div class="eval-answer">
-                <div class="eval-answer-q">The answer</div>
-                <div class="eval-answer-body">Yes — the holographic label is visible before any scan; the QR confirms it in seconds after. No app needed, no training needed. A consumer checking a product in a pharmacy aisle can do it with their phone camera in seconds.</div>
-              </div>
-            </div>
-            <div class="eval-purple-bar"></div>
+        <div class="eval-grid">
+          <div class="eval-card">
+            <span class="eval-card-role">CFO &amp; Finance</span>
+            <div class="eval-card-q">"Can we measure the ROI of this system?"</div>
+            <div class="eval-card-a">By rejecting unjustified warranty claims, uncovering grey-market diversion, and reclaiming retail space from counterfeits, the system pays for itself in hard ROI within the first year.</div>
+          </div>
+          
+          <div class="eval-card">
+            <span class="eval-card-role">Brand Protection &amp; Legal</span>
+            <div class="eval-card-q">"Will this hold up in a court of law during a dispute?"</div>
+            <div class="eval-card-a">Yes. The forensic AI watermark creates a non-repudiable audit trail. Our authentication logs provide legally admissible proof of product origin and authenticity.</div>
           </div>
 
-          <div class="eval-item" data-eval>
-            <button class="eval-trigger" aria-expanded="false">
-              <div class="eval-trigger-q">"What stops someone from photographing and reusing a genuine code?"</div>
-              <div class="eval-trigger-icon">
-                <svg class="icon" width="14" height="14"><use href="#icon-plus"/></svg>
-              </div>
-            </button>
-            <div class="eval-answer-wrap" role="region">
-              <div class="eval-answer">
-                <div class="eval-answer-q">The answer</div>
-                <div class="eval-answer-body">Geo-tagged detection catches a code being scanned somewhere it shouldn't be, the moment it happens — not weeks later in a report. A copied QR code will show up as a duplicate scan at a different geolocation and timestamp, triggering an immediate alert.</div>
-              </div>
-            </div>
-            <div class="eval-purple-bar"></div>
+          <div class="eval-card">
+            <span class="eval-card-role">Operations &amp; Supply Chain</span>
+            <div class="eval-card-q">"Will this slow down our production line?"</div>
+            <div class="eval-card-a">No. Our system integrates directly with standard continuous inkjet printers and warehouse hardware running at full line speed. No custom machinery is required.</div>
           </div>
 
-          <div class="eval-item" data-eval>
-            <button class="eval-trigger" aria-expanded="false">
-              <div class="eval-trigger-q">"Could a sophisticated counterfeiter eventually copy the label itself?"</div>
-              <div class="eval-trigger-icon">
-                <svg class="icon" width="14" height="14"><use href="#icon-plus"/></svg>
-              </div>
-            </button>
-            <div class="eval-answer-wrap" role="region">
-              <div class="eval-answer">
-                <div class="eval-answer-q">The answer</div>
-                <div class="eval-answer-body">That's exactly why there are three layers, not one — forensic authentication doesn't rely on anything visible enough to copy. Even if the overt label were convincingly replicated, the invisible watermark and geo-detection layers remain independently operational.</div>
-              </div>
-            </div>
-            <div class="eval-purple-bar"></div>
+          <div class="eval-card">
+            <span class="eval-card-role">Marketing &amp; Product</span>
+            <div class="eval-card-q">"Does this affect our packaging design?"</div>
+            <div class="eval-card-a">The Nano-OVD label can be customized to match brand aesthetics, and the forensic AI watermark is invisible to the naked eye. Your packaging looks exactly as intended.</div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- ============================================
          SECTION 5: WHAT IT ACTUALLY SOLVES — BENTO GRID
          Layout: Asymmetrical cards
@@ -1281,7 +1187,7 @@
     <section class="bento-section">
       <div class="bento-inner">
         <div class="bento-header">
-          <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem;">What it actually solves</p>
+          <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">What it actually solves</p>
           <h2>The problems you didn't think could be fixed</h2>
           <p>Counterfeiting creates a ripple effect of operational headaches. We address the root cause.</p>
         </div>
@@ -1330,43 +1236,46 @@
       </div>
     </section>
     <!-- ============================================
-         SECTION 6: FITS YOUR STACK — CENTRAL ORBIT
-         Layout: Vertical blocks with connecting line
+         SECTION 6: FITS YOUR STACK — 3 COLUMN CARDS
+         Layout: 3 columns with images
          ============================================ -->
-    <section class="orbit-section">
-      <div class="orbit-inner">
-        <div class="orbit-header">
-          <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem;">Fits the stack you already run</p>
+    <section class="integration-section">
+      <div class="integration-inner">
+        <div class="integration-header">
+          <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">Fits the stack you already run</p>
           <h2>No rip-and-replace required.</h2>
           <p>We built Smart Epsilon to plug into the systems your production lines and warehouses already depend on.</p>
         </div>
 
-        <div class="orbit-container">
+        <div class="integration-grid">
           
-          <div class="orbit-item">
-            <div class="orbit-icon"><svg class="icon" width="32" height="32"><use href="#icon-database"/></svg></div>
-            <div class="orbit-body">
-              <h3 class="orbit-name">ERP &amp; Core Systems</h3>
-              <p class="orbit-desc">Native APIs pull product master data directly from SAP, Oracle, Microsoft Dynamics, or your custom ERP. Batch numbers and SKUs sync automatically.</p>
-              <span class="orbit-badge">DATA LAYER</span>
+          <!-- Card 1 -->
+          <div class="int-card">
+            <img src="assets/node-architecture.jpg" alt="Software Data Architecture" class="int-card-img" loading="lazy" />
+            <div class="int-card-body">
+              <h3 class="int-card-title">ERP &amp; Core Systems</h3>
+              <p class="int-card-desc">Native APIs pull product master data directly from SAP, Oracle, Microsoft Dynamics, or your custom ERP. Batch numbers and SKUs sync automatically.</p>
+              <span class="int-card-badge">Data Layer</span>
             </div>
           </div>
 
-          <div class="orbit-item">
-            <div class="orbit-icon"><svg class="icon" width="32" height="32"><use href="#icon-box"/></svg></div>
-            <div class="orbit-body">
-              <h3 class="orbit-name">Warehouse Hardware</h3>
-              <p class="orbit-desc">Integrates with Zebra, Honeywell, and Datalogic scanners. Your forklift operators and line workers use the exact same scanners they used yesterday.</p>
-              <span class="orbit-badge">OPERATIONS LAYER</span>
+          <!-- Card 2 -->
+          <div class="int-card">
+            <img src="assets/warehouse-ar-BZTWCRGZ.webp" alt="Warehouse Operations" class="int-card-img" loading="lazy" />
+            <div class="int-card-body">
+              <h3 class="int-card-title">Warehouse Hardware</h3>
+              <p class="int-card-desc">Integrates with Zebra, Honeywell, and Datalogic scanners. Your forklift operators and line workers use the exact same scanners they used yesterday.</p>
+              <span class="int-card-badge">Operations Layer</span>
             </div>
           </div>
 
-          <div class="orbit-item">
-            <div class="orbit-icon"><svg class="icon" width="32" height="32"><use href="#icon-barcode"/></svg></div>
-            <div class="orbit-body">
-              <h3 class="orbit-name">Print &amp; Packaging</h3>
-              <p class="orbit-desc">Compatible with Domino, Videojet, Markem-Imaje, and industrial continuous inkjet printers. We send the serialized codes, your line prints them at full speed.</p>
-              <span class="orbit-badge">PRODUCTION LAYER</span>
+          <!-- Card 3 -->
+          <div class="int-card">
+            <img src="assets/client_factory.jpg" alt="Production Line Printing" class="int-card-img" loading="lazy" />
+            <div class="int-card-body">
+              <h3 class="int-card-title">Print &amp; Packaging</h3>
+              <p class="int-card-desc">Compatible with Domino, Videojet, Markem-Imaje, and industrial continuous inkjet printers. We send the serialized codes, your line prints them at full speed.</p>
+              <span class="int-card-badge">Production Layer</span>
             </div>
           </div>
 
@@ -1380,7 +1289,7 @@
     <section class="comparison-section">
       <div class="comparison-inner">
         <div class="comparison-header">
-          <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem;">Why layered beats single-method</p>
+          <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">Why layered beats single-method</p>
           <h2 class="section-title" style="margin-bottom: 0.75rem;">The problem with one method is one point of failure.</h2>
           <p class="card-body" style="margin: 0;">A counterfeiter only needs to reverse-engineer one thing. Three layers means they have to beat all three simultaneously.</p>
         </div>
@@ -1431,7 +1340,7 @@
     <section class="vstep-section">
       <div class="vstep-inner">
         <div class="vstep-header">
-          <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem;">One rollout process</p>
+          <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">One rollout process</p>
           <h2>Live in ~6 weeks, not 6 months.</h2>
           <p>Enterprise software shouldn't mean endless consulting hours. We deploy on a rigid, proven timeline.</p>
         </div>
@@ -1483,7 +1392,7 @@
   <section class="stage stage--voices" id="voices" aria-labelledby="voices-title" style="background: #f7f7fa;">
     <div class="stage__inner">
       <header class="voices-head" style="max-width: 800px; text-align: left; margin-bottom: 3rem;" data-reveal>
-        <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem;">Customer voices</p>
+        <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">Customer voices</p>
         <h2 id="voices-title" style="font-size: clamp(2.25rem, 5vw, 3.25rem); line-height: 1.1; margin: 0 0 1rem; color: #111111;">Real results from the teams using Smart Epsilon.</h2>
         <p style="font-size: 1.1rem; line-height: 1.6; color: rgba(0,0,0,0.6); margin: 0; font-weight: 500;">See what supply chain and brand protection leaders<br />experienced after implementing the platform.</p>
       </header>
@@ -1501,7 +1410,7 @@
           <div class="voices-slider__track" aria-live="polite" aria-atomic="true">
             <blockquote
               class="voice is-active"
-              style="--voice-accent: #8fb0ff; background: #ffffff;"
+              style="--voice-accent: #8fb0ff; background: transparent;"
               role="group"
               aria-roledescription="slide"
               aria-label="1 of 3"
@@ -1517,7 +1426,7 @@
 
             <blockquote
               class="voice is-active"
-              style="--voice-accent: #5be0c8; background: #ffffff;"
+              style="--voice-accent: #5be0c8; background: transparent;"
               role="group"
               aria-roledescription="slide"
               aria-label="2 of 3"
@@ -1533,7 +1442,7 @@
 
             <blockquote
               class="voice"
-              style="--voice-accent: #ffc978; background: #ffffff;"
+              style="--voice-accent: #ffc978; background: transparent;"
               role="group"
               aria-roledescription="slide"
               aria-label="3 of 3"
@@ -1579,7 +1488,7 @@
     <section class="faq-section">
       <div class="faq-inner">
         <div class="faq-header">
-          <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem;">Before you ask</p>
+          <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">Before you ask</p>
           <h2>The questions we hear most.</h2>
           <p>Honest answers, no sales preamble.</p>
         </div>
