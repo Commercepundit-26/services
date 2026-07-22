@@ -40,7 +40,9 @@ if hero_section:
         ''', 'html.parser'))
 
     cta_btn = hero_section.find('a', class_='btn-primary')
-    if cta_btn: cta_btn.string = 'Schedule an Agrochemicals Demo'
+    if cta_btn:
+        cta_btn.clear()
+        cta_btn.append(BeautifulSoup('Schedule an Agrochemicals Demo <svg class="icon" width="16" height="16"><use href="#icon-arrow-right"/></svg>', 'html.parser'))
 
     level_titles = hero_section.find_all('div', class_='level-title')
     level_descs = hero_section.find_all('p', class_='level-desc')
@@ -146,7 +148,8 @@ new_css = """
 }
 .agro-prob-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+  border-color: rgba(104, 98, 167, 0.4);
+  box-shadow: 0 12px 40px rgba(15, 15, 37, 0.1);
 }
 .agro-prob-num {
   font-size: 3.5rem;
@@ -184,8 +187,9 @@ new_css = """
   box-shadow: 0 4px 20px rgba(0,0,0,0.02);
 }
 .agro-bento-item:hover {
-  border-color: rgba(104, 98, 167, 0.3);
-  box-shadow: 0 16px 40px rgba(104, 98, 167, 0.08);
+  transform: translateY(-4px);
+  border-color: rgba(104, 98, 167, 0.4);
+  box-shadow: 0 12px 40px rgba(15, 15, 37, 0.1);
 }
 .agro-bento-icon {
   width: 48px;
@@ -323,8 +327,9 @@ new_css = """
 }
 .agro-value-card:hover {
   background: var(--agro-surface);
-  transform: translateX(-8px);
-  box-shadow: 12px 12px 40px rgba(0,0,0,0.04);
+  transform: translateY(-4px);
+  border-color: rgba(104, 98, 167, 0.4);
+  box-shadow: 0 12px 40px rgba(15, 15, 37, 0.1);
 }
 .agro-value-icon {
   width: 48px;
@@ -420,27 +425,27 @@ middle_html = """
       <div class="agro-prob-card">
         <div class="agro-prob-num">01</div>
         <h3>Spurious Product in the Channel</h3>
-        <p>"Your biggest ag retailer is quietly stocking a look-alike at 20% below your list price. Can you prove to a grower which bag is real?" Unregistered formulators and repackagers sell copies that look right on the shelf — a grower finds out only when the spray fails.</p>
+        <p>Your biggest ag retailer is quietly stocking a look-alike at 20% below your list price. Can you prove to a grower which bag is real? Unregistered formulators and repackagers sell copies that look right on the shelf — a grower finds out only when the spray fails.</p>
       </div>
       <div class="agro-prob-card">
         <div class="agro-prob-num">02</div>
         <h3>Sell-In Doesn't Equal Sell-Out</h3>
-        <p>"Distributor orders looked strong all season. Why is next year's demand forecast already wrong?" What shipped and what actually moved through the dealer network to a grower are different numbers — and production plans get built on the wrong one.</p>
+        <p>Distributor orders looked strong all season. Why is next year's demand forecast already wrong? What shipped and what actually moved through the dealer network to a grower are different numbers — and production plans get built on the wrong one.</p>
       </div>
       <div class="agro-prob-card">
         <div class="agro-prob-num">03</div>
         <h3>Regulatory Audit, No Notice</h3>
-        <p>"A State Lead Agency inspector wants batch-level RUP records and WPS documentation — this week." Reconstructing that from spreadsheets turns a routine inspection into a multi-day scramble.</p>
+        <p>A State Lead Agency inspector wants batch-level RUP records and WPS documentation — this week. Reconstructing that from spreadsheets turns a routine inspection into a multi-day scramble.</p>
       </div>
       <div class="agro-prob-card">
         <div class="agro-prob-num">04</div>
         <h3>Misapplication Liability</h3>
-        <p>"A grower used the wrong dosage, and now there's a crop-failure claim with your name on it." The liability conversation starts with your brand, whether or not the product was ever the actual problem.</p>
+        <p>A grower used the wrong dosage, and now there's a crop-failure claim with your name on it. The liability conversation starts with your brand, whether or not the product was ever the actual problem.</p>
       </div>
       <div class="agro-prob-card">
         <div class="agro-prob-num">05</div>
         <h3>Dealer Trust and Channel Loyalty</h3>
-        <p>"Your dealer's incentive payout has been stuck in review for six weeks. Why would they push your product this season?" Slow, disputed rebate programs cost the shelf space the payout was supposed to buy.</p>
+        <p>Your dealer's incentive payout has been stuck in review for six weeks. Why would they push your product this season? Slow, disputed rebate programs cost the shelf space the payout was supposed to buy.</p>
       </div>
     </div>
   </div>
@@ -796,6 +801,7 @@ if cta_section:
     if cta_intro:
         cta_intro.clear()
         cta_intro.append(BeautifulSoup("See how Smart Epsilon protects your formulation,<br/>your dealer network, and the growers who trust your label.", 'html.parser'))
+        cta_intro['style'] = "font-size: 75%;"
     if cta_lede: cta_lede.string = ""
 
 # Write to industry-template.html
