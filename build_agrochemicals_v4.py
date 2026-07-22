@@ -77,6 +77,38 @@ new_css = """
   --agro-primary: #6862a7;
 }
 
+/* ============================================
+   INTERNAL HERO GRID — EXACT 28px SVG MATCH
+   ============================================ */
+.stage.stage--hero.internal-hero {
+  background: #0b1220 !important;
+  color: #ffffff !important;
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.internal-hero-svg-grid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: auto;
+}
+.internal-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  pointer-events: none;
+}
+.internal-hero-content a,
+.internal-hero-content button,
+.internal-hero-content .light-card {
+  pointer-events: auto;
+}
+
 /* Base Sections */
 .agro-section {
   padding: 120px 0;
