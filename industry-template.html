@@ -1052,8 +1052,8 @@
 
 /* Fix Hero Spacing */
 .internal-hero-content {
-  padding-top: 140px !important;
-  padding-bottom: 120px !important;
+  padding-top: 70px !important;
+  padding-bottom: 60px !important;
 }
 
 /* CAROUSEL BASE STYLES */
@@ -1066,6 +1066,8 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--agro-primary-light) transparent;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 .agro-carousel::-webkit-scrollbar {
   height: 8px;
@@ -1101,8 +1103,7 @@
 .agro-prob-num {
   font-size: 3.5rem;
   font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(104, 98, 167, 0.4);
+  color: rgba(104, 98, 167, 0.15);
   margin-bottom: 24px;
   line-height: 1;
 }
@@ -1141,7 +1142,7 @@
 }
 .agro-bento-img {
   width: 100%;
-  height: 180px;
+  height: 234px;
   object-fit: cover;
   border-bottom: 1px solid var(--agro-border);
 }
@@ -1481,8 +1482,8 @@ document.addEventListener('DOMContentLoaded', () => {
          Layout: Vertical stacked quotes, magazine-editorial
          ============================================ -->
 
-<!-- 2. REAL SUPPLY CHAIN PROBLEMS (CAROUSEL) -->
-<section class="agro-section alt">
+<!-- 1. THE REAL SUPPLY CHAIN PROBLEMS -->
+<section class="agro-section">
 <div class="agro-container">
 <div class="agro-header">
 <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">Real-world risks</p>
@@ -1518,8 +1519,8 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 </div>
 </section>
-<!-- 3. PLATFORM CAPABILITIES REDESIGN (CAROUSEL) -->
-<section class="agro-section">
+<!-- 2. PLATFORM CAPABILITIES -->
+<section class="agro-section alt">
 <div class="agro-container">
 <div class="agro-header">
 <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">Platform Capabilities</p>
@@ -1532,22 +1533,42 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="agro-bento-content"><p>Verify a crop protection product's authenticity before purchase — no device required for the first check.</p></div>
 </div>
 <div class="agro-bento-item">
-<img alt="Temperature" class="agro-bento-img" src="assets/images/card-bg-2.jpg"/>
+<img alt="Confirm Loading" class="agro-bento-img" src="assets/images/card-bg-3.jpg"/>
+<div class="agro-bento-content"><p>Confirm loading and unloading accuracy at regional distribution centers in real time.</p></div>
+</div>
+<div class="agro-bento-item">
+<img alt="Temperature" class="agro-bento-img" src="assets/images/card-bg-4.jpg"/>
 <div class="agro-bento-content"><p>Monitor temperature compliance for cold-sensitive seed treatments in storage and transit.</p></div>
 </div>
 <div class="agro-bento-item">
-<img alt="Shrinkage" class="agro-bento-img" src="assets/images/card-bg-1.jpg"/>
+<img alt="Shrinkage" class="agro-bento-img" src="assets/images/card-bg-5.jpg"/>
 <div class="agro-bento-content"><p>Flag shrinkage or theft of high-value patented formulations as it happens, not at the next count.</p></div>
 </div>
 <div class="agro-bento-item">
-<img alt="Dashboard" class="agro-bento-img" src="assets/images/card-bg-2.jpg"/>
+<img alt="Dashboard" class="agro-bento-img" src="assets/images/card-bg-6.jpg"/>
 <div class="agro-bento-content"><p>Give every dealer real-time visibility into exactly what they've earned, and why.</p></div>
+</div>
+<div class="agro-bento-item">
+<img alt="Distribution Map" class="agro-bento-img" src="assets/images/card-bg-7.jpg"/>
+<div class="agro-bento-content"><p>Ensure safe distribution of Restricted Use Pesticides strictly through authorized channels.</p></div>
+</div>
+<div class="agro-bento-item">
+<img alt="Holographic Seal" class="agro-bento-img" src="assets/images/card-bg-8.jpg"/>
+<div class="agro-bento-content"><p>Verify tamper-evident digital seals and lock down brand reputation against spurious products.</p></div>
+</div>
+<div class="agro-bento-item">
+<img alt="Grower Tech" class="agro-bento-img" src="assets/images/card-bg-1.jpg"/>
+<div class="agro-bento-content"><p>Give growers the confidence they are spraying genuine formulation on their acres.</p></div>
+</div>
+<div class="agro-bento-item">
+<img alt="Smart Analytics" class="agro-bento-img" src="assets/images/card-bg-2.jpg"/>
+<div class="agro-bento-content"><p>Deliver automated inventory reconciliation and streamline complex channel rebates.</p></div>
 </div>
 </div>
 </div>
 </section>
-<!-- 4. HOW EACH SOLUTION APPLIES -->
-<section class="agro-section alt">
+<!-- 3. HOW EACH SOLUTION APPLIES -->
+<section class="agro-section">
 <div class="agro-container">
 <div class="agro-header">
 <p class="eyebrow" style="color: #6862a7; margin-bottom: 0.75rem; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;">Agrochemical Implementations</p>
@@ -1645,8 +1666,8 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 </div>
 </section>
-<!-- 5. ENTERPRISE VALUE REDESIGN (TOP-ALIGNED STICKY) -->
-<section class="agro-section">
+<!-- 4. ENTERPRISE VALUE -->
+<section class="agro-section alt">
 <div class="agro-container">
 <div class="agro-value-wrapper">
 <div class="agro-value-sticky">
@@ -1715,8 +1736,8 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 </div>
 </section>
-<!-- 6. COMPLIANCE & REGULATORY (TOP-ALIGNED STICKY) -->
-<section class="agro-section alt">
+<!-- 5. REGULATORY ALIGNMENT -->
+<section class="agro-section">
 <div class="agro-container">
 <div class="agro-comp-inner">
 <div class="agro-comp-sidebar">
@@ -1915,7 +1936,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="cta-shell">
 <header class="cta-intro" data-reveal="">
 <p class="eyebrow">Book a demo</p>
-<h2 class="cta-intro__title" style="font-size: 75%;">See how Smart Epsilon protects your formulation,<br/>your dealer network, and the growers who trust your label.</h2><div style="margin-top: 30px;"><a class="btn btn-primary" href="#contact">Schedule an Agrochemicals Demo <svg class="icon" height="16" width="16"><use href="#icon-arrow-right"></use></svg></a></div>
+<h2 class="cta-intro__title" style="font-size: 250%; max-width: none;">See how Smart Epsilon protects your formulation,<br/>your dealer network, and the growers who trust your label.</h2><div style="margin-top: 30px;"><a class="btn btn-primary" href="#contact">Schedule an Agrochemicals Demo <svg class="icon" height="16" width="16"><use href="#icon-arrow-right"></use></svg></a></div>
 <p class="cta-intro__lede"></p>
 </header>
 <div class="cta-board" data-reveal="">

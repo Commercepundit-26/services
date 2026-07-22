@@ -108,8 +108,8 @@ new_css = """
 
 /* Fix Hero Spacing */
 .internal-hero-content {
-  padding-top: 140px !important;
-  padding-bottom: 120px !important;
+  padding-top: 70px !important;
+  padding-bottom: 60px !important;
 }
 
 /* CAROUSEL BASE STYLES */
@@ -122,6 +122,8 @@ new_css = """
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--agro-primary-light) transparent;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 .agro-carousel::-webkit-scrollbar {
   height: 8px;
@@ -157,8 +159,7 @@ new_css = """
 .agro-prob-num {
   font-size: 3.5rem;
   font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(104, 98, 167, 0.4);
+  color: rgba(104, 98, 167, 0.15);
   margin-bottom: 24px;
   line-height: 1;
 }
@@ -197,7 +198,7 @@ new_css = """
 }
 .agro-bento-img {
   width: 100%;
-  height: 180px;
+  height: 234px;
   object-fit: cover;
   border-bottom: 1px solid var(--agro-border);
 }
@@ -537,16 +538,36 @@ middle_html = """
         <div class="agro-bento-content"><p>Verify a crop protection product's authenticity before purchase — no device required for the first check.</p></div>
       </div>
       <div class="agro-bento-item">
-        <img class="agro-bento-img" src="assets/images/card-bg-2.jpg" alt="Temperature">
+        <img class="agro-bento-img" src="assets/images/card-bg-3.jpg" alt="Confirm Loading">
+        <div class="agro-bento-content"><p>Confirm loading and unloading accuracy at regional distribution centers in real time.</p></div>
+      </div>
+      <div class="agro-bento-item">
+        <img class="agro-bento-img" src="assets/images/card-bg-4.jpg" alt="Temperature">
         <div class="agro-bento-content"><p>Monitor temperature compliance for cold-sensitive seed treatments in storage and transit.</p></div>
       </div>
       <div class="agro-bento-item">
-        <img class="agro-bento-img" src="assets/images/card-bg-1.jpg" alt="Shrinkage">
+        <img class="agro-bento-img" src="assets/images/card-bg-5.jpg" alt="Shrinkage">
         <div class="agro-bento-content"><p>Flag shrinkage or theft of high-value patented formulations as it happens, not at the next count.</p></div>
       </div>
       <div class="agro-bento-item">
-        <img class="agro-bento-img" src="assets/images/card-bg-2.jpg" alt="Dashboard">
+        <img class="agro-bento-img" src="assets/images/card-bg-6.jpg" alt="Dashboard">
         <div class="agro-bento-content"><p>Give every dealer real-time visibility into exactly what they've earned, and why.</p></div>
+      </div>
+      <div class="agro-bento-item">
+        <img class="agro-bento-img" src="assets/images/card-bg-7.jpg" alt="Distribution Map">
+        <div class="agro-bento-content"><p>Ensure safe distribution of Restricted Use Pesticides strictly through authorized channels.</p></div>
+      </div>
+      <div class="agro-bento-item">
+        <img class="agro-bento-img" src="assets/images/card-bg-8.jpg" alt="Holographic Seal">
+        <div class="agro-bento-content"><p>Verify tamper-evident digital seals and lock down brand reputation against spurious products.</p></div>
+      </div>
+      <div class="agro-bento-item">
+        <img class="agro-bento-img" src="assets/images/card-bg-1.jpg" alt="Grower Tech">
+        <div class="agro-bento-content"><p>Give growers the confidence they are spraying genuine formulation on their acres.</p></div>
+      </div>
+      <div class="agro-bento-item">
+        <img class="agro-bento-img" src="assets/images/card-bg-2.jpg" alt="Smart Analytics">
+        <div class="agro-bento-content"><p>Deliver automated inventory reconciliation and streamline complex channel rebates.</p></div>
       </div>
     </div>
   </div>
@@ -846,10 +867,9 @@ if cta_section:
     cta_intro = cta_section.find('h2', class_='cta-intro__title')
     cta_lede = cta_section.find('p', class_='cta-intro__lede')
     if cta_intro:
+        cta_intro['style'] = 'font-size: 250%; max-width: none;'
         cta_intro.clear()
         cta_intro.append(BeautifulSoup("See how Smart Epsilon protects your formulation,<br/>your dealer network, and the growers who trust your label.", 'html.parser'))
-        cta_intro['style'] = "font-size: 75%;"
-        
         # Add the requested CTA button after the text
         btn_html = '<div style="margin-top: 30px;"><a class="btn btn-primary" href="#contact">Schedule an Agrochemicals Demo <svg class="icon" width="16" height="16"><use href="#icon-arrow-right"/></svg></a></div>'
         cta_intro.insert_after(BeautifulSoup(btn_html, 'html.parser'))
