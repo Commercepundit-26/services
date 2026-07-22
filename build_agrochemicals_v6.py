@@ -116,7 +116,6 @@ new_css = """
 .agro-carousel {
   display: flex;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   gap: 24px;
   padding-bottom: 40px;
   -webkit-overflow-scrolling: touch;
@@ -142,7 +141,6 @@ new_css = """
 /* 1. Risks Carousel */
 .agro-prob-card {
   flex: 0 0 380px;
-  scroll-snap-align: start;
   background: var(--agro-surface);
   border: 1px solid var(--agro-border);
   border-radius: 20px;
@@ -179,7 +177,6 @@ new_css = """
 /* 2. Platform Capabilities Carousel */
 .agro-bento-item {
   flex: 0 0 320px;
-  scroll-snap-align: start;
   background: var(--agro-surface);
   border: 1px solid var(--agro-border);
   border-radius: 24px;
@@ -227,7 +224,12 @@ new_css = """
   position: sticky;
   top: 100px;
   box-shadow: 0 -10px 40px rgba(0,0,0,0.02);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.agro-stack-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(104, 98, 167, 0.4);
+  box-shadow: 0 12px 40px rgba(15, 15, 37, 0.1);
 }
 .agro-stack-card:nth-child(1) { top: 100px; }
 .agro-stack-card:nth-child(2) { top: 120px; }
